@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+.gitignore
+ODCM-Team2.Rproj
+.Rhistory
+.Rproj
