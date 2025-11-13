@@ -40,7 +40,7 @@ def collect_efteling_data():
                 single_rider_wait = item['queue'].get('SINGLE_RIDER', {}).get('waitTime')
                 
                 # Handle standby queue
-                if status in ['CLOSED', 'REFURBISHMENT']:
+                if status in ['CLOSED', 'DOWN', 'REFURBISHMENT']:
                     standby_wait = 'N/A'
                 else:
                     if standby_wait is None:
