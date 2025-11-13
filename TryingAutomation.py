@@ -96,3 +96,4 @@ def collect_efteling_data():
 # Run the collection once
 if __name__ == "__main__":
     collect_efteling_data()
+
