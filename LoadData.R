@@ -6,20 +6,39 @@ library(tidyverse)
 #WEBSCRAPING PART#
 ##################
 
-#Inspect dataset to get an impression of what it looks like
-efteling_metadata <- read_csv("efteling_metadata_all.csv")
-efteling_rides <- read_csv("efteling_rides_all.csv")
 
+# Combined ride wait-time dataset (uit jouw scraper)
+efteling_rides <- read_csv("efteling_rides_all_years.csv")
 
-#Some graphs
+# Combined park info dataset (crowd, weather, events)
+efteling_parkinfo <- read_csv("efteling_parkinfo_all_years.csv")
+
+##################
+# BASIC INSPECTION
+##################
+
+glimpse(efteling_rides)
+glimpse(efteling_parkinfo)
+
+# Example: mean wait time for one ride
 efteling_rides %>% 
-  group_by(ride = "Joris en de Draak") %>%
-  summarise(queue = mean(avg_queue_min, na.rm = TRUE))
+  filter(ride == "Joris en de Draak") %>%
+  summarise(avg_queue = mean(avg_queue_min, na.rm = TRUE))
 
-#How many rides
-unique(efteling_rides$ride)
-#some things in here are not rides in the park, such as poolenspa, what do we do with that?
+# Unique rides
+unique_rides <- unique(efteling_rides$ride)
+length(unique_rides)
 
+#############################
+# IDENTIFY NON-ATTRACTIONS
+#############################
+
+# Parkinfo contains the “true” list of attractions.
+non_attractions <- efteling_rides %>%
+  filter(!ride %in% efteling_parkinfo$ride) %>%
+  distinct(ride)
+
+non_attractions
 
 ##########
 #API PART#
