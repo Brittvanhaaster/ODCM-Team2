@@ -1,9 +1,9 @@
-#Theme Park Queues and Weather  
+# Theme Park Queues and Weather  
 
 
-##1.		Motivation1 
+## 1.		Motivation1 
 
-###1.1	What primary business problem motivated the creation of this dataset (“data context”)? How does the dataset offer insights into new phenomena, contribute to developing new models, or streamline gathering essential information? Why is this dataset valuable to the broader research community or industry stakeholders? Please list potential research questions or use cases of your dataset.  
+### 1.1	What primary business problem motivated the creation of this dataset (“data context”)? How does the dataset offer insights into new phenomena, contribute to developing new models, or streamline gathering essential information? Why is this dataset valuable to the broader research community or industry stakeholders? Please list potential research questions or use cases of your dataset.  
 
 Waiting –one has to do it continuously. Whether that is for everyday activities like waiting for a train of for checking-out groceries, or more unique instances such as waiting before a concert starts or for boarding a theme park attraction. Waiting takes place in two contexts; a utilitarian context which concerns waiting for necessary or functional products or services, while a hedonic context has objectives related to intrinsic pleasure and ‘feeling good’ (Chandon et al., 2000). Current research is typically focused on the utilitarian aspects of life, such as healthcare, retail or public transport (e.g. Michael et al., 2013, Van Riel et al., 2012, Millonig et al., 2012). Since the implication of waiting in a hedonic context is fundamentally different, it is worthwhile to create a dataset on waiting related to a hedonic context. Additionally, current research widely adopts a psychological perspective, for example by investigating the discrepancy between the actual wait time and how long someone psychologically perceives a queue to be (Bielen and Demoulin’s, 2007). As such, academic relevance could be yielded by focusing on a hedonic context while adopting a macro-scaled approach.  
 
@@ -27,7 +27,7 @@ Practical implications of the dataset include the opportunity to for example not
 
  
 
-###1.2	Please compare the various websites and APIs you assessed relevant to your data context. A table may help to compare data sources. Why did you choose your specific data source? Discuss the research fit, extraction method (e.g., web scraping vs. APIs), efficiency of resource use, and any other factors that made it emerge as the best choice. For tips, see challenges 1.1 and 1.2 in Boegershausen et al. 2022. 
+### 1.2	Please compare the various websites and APIs you assessed relevant to your data context. A table may help to compare data sources. Why did you choose your specific data source? Discuss the research fit, extraction method (e.g., web scraping vs. APIs), efficiency of resource use, and any other factors that made it emerge as the best choice. For tips, see challenges 1.1 and 1.2 in Boegershausen et al. 2022. 
 
 When selecting APIs and data extraction methods, this study followed best practices derived from Boegerhauseen et al. (2022). Solutions and best practices were grouped into five categories utilised to access the quality of the data extraction method. The categories are research relevance, transparency and documentation, update frequency, reproducibility, and ethical and legal compliance, which will be further discussed below. 
 
@@ -45,7 +45,7 @@ Ethical and legal compliance. The sources need assessment in relation to terms o
 
  
 
-###Table 1: Assessing Data Options for Theme Park Queue Times 
+### Table 1: Assessing Data Options for Theme Park Queue Times 
 
 | Description | Extraction method | Description | Research fit | Reliability | Update frequenccy | Limitations |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -55,7 +55,7 @@ Ethical and legal compliance. The sources need assessment in relation to terms o
 | Theme Parks Wiki  (https://themeparks.wiki/api ) | ThemeParks.wiki Python Client | Retrieves live data, park schedules and entity metadata through code intergration | Good for automated data collection and reproducible research. | High: uses stable endpoints from ThemeParks backed, and open source. | Updated every few minutes | Dependent on upstream feeds, client maintenance varies. |
 | Themepark Queue times  (https://github.com/cubehouse/themeparks) | Themeparks API | Provides a list of supported parks and some basic meta data | Good for initial data discovery | Its open, but is part of deprecated preview that could become outdated | Real-time acces when queried | Limited data depth |
 
-Table 2: Assessing Data Options for Weather 
+### Table 2: Assessing Data Options for Weather 
 
 | Description | Extraction method | Description | Research fit | Reliability | Update frequency | Limitations |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -77,7 +77,7 @@ Looking at the weather data options, when the web scrapings are excluded, the We
 
  
 
-###1.3	Who created this dataset (e.g., which team). Mention you are students of the Marketing Analytics program at Tilburg University. 
+### 1.3	Who created this dataset (e.g., which team). Mention you are students of the Marketing Analytics program at Tilburg University. 
 
 This project is set up as part of the course Online Data Collection & Management of the Master of Science Marketing Analytics program at Tilburg University, based in The Netherlands. The project is implemented by: 
 
@@ -93,9 +93,9 @@ Amy Quist
 
 Stefan Valentijn 
 
-##2.		Data Extraction Plan 
+## 2.		Data Extraction Plan 
 
-###2.1	Please describe your data extraction plan in such a way that another researcher or team could replicate your data collection process. Which information to extract from which pages, how to sample, at which frequency to extract the data, and how to process the data during the collection. In your description, explain how you tackled the various validity, legal/ethical, and technical challenges. See Boegershausen et al. (2022, challenges 2.1-2.4) for tips. 
+### 2.1	Please describe your data extraction plan in such a way that another researcher or team could replicate your data collection process. Which information to extract from which pages, how to sample, at which frequency to extract the data, and how to process the data during the collection. In your description, explain how you tackled the various validity, legal/ethical, and technical challenges. See Boegershausen et al. (2022, challenges 2.1-2.4) for tips. 
 
 As previously identified, APIs will be used to construct a dataset that comprises a) historical theme park queue times and b) weather conditions. For feasibility, the focus is on one theme park: The Efteling. As such, the former API will gather the historical queue time information per attraction of the theme park. On the other hand, the latter API will gather the historical weather conditions per day. Nevertheless, the APIs chosen can also be specified to other theme parks and have therefore been chosen, so additional data can be added using the same methodology. 
 
@@ -129,63 +129,63 @@ The dataset does not include any confidential or sensitive personal data. It inc
 
  
 
-###2.3 If the dataset relates to people, is it possible to identify individuals (i.e., one or more natural persons), either directly or indirectly (i.e., in combination with other data) from the dataset? If so, please describe how. 
+### 2.3 If the dataset relates to people, is it possible to identify individuals (i.e., one or more natural persons), either directly or indirectly (i.e., in combination with other data) from the dataset? If so, please describe how. 
 
 It is not possible to identify any individuals, either directly or indirectly, from the dataset. The data is collected and processed in an aggregated and anonymised way, ensuring that no natural person can be identified or linked to specific observations. It is a publicly availbale dataset of queue times and weather conditions, without collecting or storing any visitor data. Thus, the dataset is not able to be used to identify any visitors. 
 
  
 
-##3.		Data Extraction Process 
+## 3.		Data Extraction Process 
 
-###3.1	When was the data collected?  
-
- 
-
-###3.2 	Please describe any technical challenges you encountered while scaling your data collection. How did you resolve them? Please provide a clear explanation of the debugging process (see Boegershausen et al. 2022, challenge 3.1). 
+### 3.1	When was the data collected?  
 
  
 
-###3.3 	What measures or monitoring systems were in place to ensure and validate the quality of the extracted data? Can you describe how these monitoring systems functioned? (see Boegershausen et al. 2022, challenge 3.2). 
+### 3.2 	Please describe any technical challenges you encountered while scaling your data collection. How did you resolve them? Please provide a clear explanation of the debugging process (see Boegershausen et al. 2022, challenge 3.1). 
 
  
 
-###3.4 	Can you specify the infrastructure you used for the deployment and execution of your data collection? 
+### 3.3 	What measures or monitoring systems were in place to ensure and validate the quality of the extracted data? Can you describe how these monitoring systems functioned? (see Boegershausen et al. 2022, challenge 3.2). 
 
  
 
-##4.		Preprocessing, cleaning, labeling 
-
-###4.1 After collecting the data, did you perform any data processing? If yes, please provide specific examples and explain the reasoning behind each step. 
+### 3.4 	Can you specify the infrastructure you used for the deployment and execution of your data collection? 
 
  
 
-###4.2 Were any measures implemented to ensure privacy, such as anonymizing user data? Please describe the methods used. 
+## 4.		Preprocessing, cleaning, labeling 
+
+### 4.1 After collecting the data, did you perform any data processing? If yes, please provide specific examples and explain the reasoning behind each step. 
 
  
 
-###4.3 How did you address and clean out any implausible or erroneous observations in the dataset? 
+### 4.2 Were any measures implemented to ensure privacy, such as anonymizing user data? Please describe the methods used. 
 
  
 
-###4.4 Did you modify the data structure for long-term storage, like rearranging the dataset or renaming columns for clarity? If so, provide details on these changes and their rationale. 
+### 4.3 How did you address and clean out any implausible or erroneous observations in the dataset? 
 
  
 
-###4.5 What potential threats or biases could arise from your pre-processing steps? Please elaborate on any risks associated with the modifications made to the data and how they might impact the dataset's integrity or utility. 
+### 4.4 Did you modify the data structure for long-term storage, like rearranging the dataset or renaming columns for clarity? If so, provide details on these changes and their rationale. 
 
  
 
-##5.		Data inspection 
-
-###5.1	Please provide a variety of meaningful summary statistics and plots. For example, consider means/SDs for continuous variables, frequency distributions for categorical variables or – in the case of plots – bar charts, line plots, or histograms. This part of the documentation is intended to illustrate the richness of the collected data. 
+### 4.5 What potential threats or biases could arise from your pre-processing steps? Please elaborate on any risks associated with the modifications made to the data and how they might impact the dataset's integrity or utility. 
 
  
 
-###5.2	Is any information missing from individual instances? If so, please describe why this information is missing (e.g., because it was unavailable). This does not include intentionally removed information but might include, e.g., redacted text. 
+## 5.		Data inspection 
+
+### 5.1	Please provide a variety of meaningful summary statistics and plots. For example, consider means/SDs for continuous variables, frequency distributions for categorical variables or – in the case of plots – bar charts, line plots, or histograms. This part of the documentation is intended to illustrate the richness of the collected data. 
 
  
 
-##6.		Reference List 
+### 5.2	Is any information missing from individual instances? If so, please describe why this information is missing (e.g., because it was unavailable). This does not include intentionally removed information but might include, e.g., redacted text. 
+
+ 
+
+## 6.		Reference List 
 
 Guyt, J. Y., Datta, H., & Johannes Boegershausen. (2024). Unlocking the Potential of Web Data for Retailing Research. Journal of Retailing. https://doi.org/10.1016/j.jretai.2024.02.002 
 
