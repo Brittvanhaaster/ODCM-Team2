@@ -1,0 +1,366 @@
+date,crowd_percent,crowd_label,temperature_forecast,temperature_actual,intensity_forecast,intensity_actual,wind_forecast,wind_actual,events
+2023-01-01,13%,Empty,11.8 °C,12.3 °C,0.21 mm/h,0.13 mm/h,6.7 m/s,6.4 m/s,🎄 Winter Efteling
+2023-01-02,45%,Quiet,8.8 °C,8.8 °C,0.21 mm/h,0.31 mm/h,4.8 m/s,4.9 m/s,🎄 Winter Efteling
+2023-01-03,97%,Packed,8.0 °C,7.5 °C,0.0 mm/h,0.0 mm/h,6.8 m/s,6.4 m/s,🎄 Winter Efteling
+2023-01-04,58%,Busy,11.6 °C,11.8 °C,0.21 mm/h,0.18 mm/h,10.3 m/s,10.9 m/s,🎄 Winter Efteling
+2023-01-05,95%,Packed,9.7 °C,10.4 °C,0.05 mm/h,0.04 mm/h,4.7 m/s,4.9 m/s,🎄 Winter Efteling
+2023-01-06,68%,Busy,10.5 °C,10.1 °C,0.11 mm/h,0.09 mm/h,5.4 m/s,5.4 m/s,🎄 Winter Efteling
+2023-01-07,67%,Busy,9.3 °C,9.8 °C,0.09 mm/h,0.08 mm/h,7.8 m/s,8.0 m/s,🎄 Winter Efteling
+2023-01-08,56%,Busy,8.6 °C,8.5 °C,0.11 mm/h,0.06 mm/h,6.4 m/s,6.9 m/s,🎄 Winter Efteling
+2023-01-09,19%,Empty,7.4 °C,7.6 °C,0.13 mm/h,0.16 mm/h,6.5 m/s,6.3 m/s,🎄 Winter Efteling
+2023-01-10,8%,Empty,6.0 °C,5.8 °C,0.24 mm/h,0.47 mm/h,7.5 m/s,7.8 m/s,🎄 Winter Efteling
+2023-01-11,11%,Empty,8.7 °C,9.3 °C,0.05 mm/h,0.05 mm/h,7.1 m/s,7.4 m/s,🎄 Winter Efteling
+2023-01-12,3%,Empty,10.2 °C,10.2 °C,0.74 mm/h,1.21 mm/h,9.5 m/s,9.8 m/s,🎄 Winter Efteling
+2023-01-13,10%,Empty,7.9 °C,7.9 °C,0.11 mm/h,0.14 mm/h,10.2 m/s,10.0 m/s,🎄 Winter Efteling
+2023-01-14,13%,Empty,10.0 °C,9.7 °C,1.05 mm/h,0.91 mm/h,11.2 m/s,11.3 m/s,🎄 Winter Efteling
+2023-01-15,46%,Quiet,5.8 °C,6.4 °C,0.16 mm/h,0.16 mm/h,9.9 m/s,10.4 m/s,🎄 Winter Efteling
+2023-01-16,6%,Empty,4.2 °C,4.9 °C,0.67 mm/h,0.63 mm/h,5.1 m/s,5.4 m/s,🎄 Winter Efteling
+2023-01-17,9%,Empty,2.5 °C,2.6 °C,0.0 mm/h,0.0 mm/h,2.8 m/s,2.4 m/s,🎄 Winter Efteling
+2023-01-18,11%,Empty,2.7 °C,2.9 °C,0.1 mm/h,0.09 mm/h,6.0 m/s,6.1 m/s,🎄 Winter Efteling
+2023-01-19,4%,Empty,3.5 °C,3.5 °C,0.09 mm/h,0.06 mm/h,3.4 m/s,3.7 m/s,🎄 Winter Efteling
+2023-01-20,21%,Empty,3.6 °C,2.2 °C,0.28 mm/h,0.54 mm/h,3.7 m/s,3.1 m/s,🎄 Winter Efteling
+2023-01-21,87%,Packed,0.3 °C,0.4 °C,0.0 mm/h,0.0 mm/h,2.7 m/s,3.1 m/s,🎄 Winter Efteling
+2023-01-22,96%,Packed,1.1 °C,0.9 °C,0.0 mm/h,0.0 mm/h,3.8 m/s,3.9 m/s,🎄 Winter Efteling
+2023-01-23,17%,Empty,2.6 °C,2.7 °C,0.0 mm/h,0.01 mm/h,3.4 m/s,3.5 m/s,🎄 Winter Efteling
+2023-01-24,9%,Empty,2.3 °C,2.2 °C,0.0 mm/h,0.0 mm/h,3.5 m/s,3.4 m/s,🎄 Winter Efteling
+2023-01-25,14%,Empty,1.6 °C,0.2 °C,0.0 mm/h,0.0 mm/h,2.2 m/s,2.2 m/s,🎄 Winter Efteling
+2023-01-26,9%,Empty,5.7 °C,5.5 °C,0.02 mm/h,0.02 mm/h,4.4 m/s,4.8 m/s,🎄 Winter Efteling
+2023-01-27,21%,Empty,4.1 °C,4.2 °C,0.0 mm/h,0.0 mm/h,4.4 m/s,4.5 m/s,🎄 Winter Efteling
+2023-01-28,94%,Packed,2.4 °C,2.2 °C,0.0 mm/h,0.0 mm/h,1.4 m/s,1.8 m/s,🎄 Winter Efteling
+2023-01-29,92%,Packed,3.2 °C,2.6 °C,0.02 mm/h,0.01 mm/h,5.6 m/s,5.8 m/s,🎄 Winter Efteling
+2023-01-30,16%,Empty,7.4 °C,7.0 °C,0.02 mm/h,0.01 mm/h,8.1 m/s,8.4 m/s,🎄 Winter Efteling
+2023-01-31,5%,Empty,6.9 °C,7.2 °C,0.04 mm/h,0.03 mm/h,7.4 m/s,7.9 m/s,🎄 Winter Efteling
+2023-02-01,13%,Empty,7.6 °C,7.3 °C,0.05 mm/h,0.03 mm/h,9.7 m/s,9.9 m/s,🎄 Winter Efteling
+2023-02-02,0%,Empty,7.8 °C,8.4 °C,0.04 mm/h,0.03 mm/h,6.3 m/s,6.5 m/s,🎄 Winter Efteling
+2023-02-03,32%,Quiet,9.6 °C,9.6 °C,0.01 mm/h,0.04 mm/h,6.9 m/s,7.7 m/s,🎄 Winter Efteling
+2023-02-04,79%,Packed,8.2 °C,8.5 °C,0.03 mm/h,0.03 mm/h,1.5 m/s,1.3 m/s,🎄 Winter Efteling
+2023-02-05,63%,Busy,7.0 °C,6.9 °C,0.01 mm/h,0.01 mm/h,6.8 m/s,7.5 m/s,🎄 Winter Efteling
+2023-02-06,25%,Quiet,5.8 °C,5.4 °C,0.0 mm/h,0.0 mm/h,3.3 m/s,3.1 m/s,🎄 Winter Efteling
+2023-02-07,13%,Empty,3.8 °C,3.6 °C,0.0 mm/h,0.0 mm/h,3.0 m/s,2.8 m/s,🎄 Winter Efteling
+2023-02-08,21%,Empty,4.5 °C,4.9 °C,0.0 mm/h,0.0 mm/h,3.3 m/s,3.1 m/s,🎄 Winter Efteling
+2023-02-09,15%,Empty,4.2 °C,4.5 °C,0.0 mm/h,0.0 mm/h,3.9 m/s,3.8 m/s,🎄 Winter Efteling
+2023-02-10,27%,Quiet,5.8 °C,5.9 °C,0.0 mm/h,0.0 mm/h,4.7 m/s,4.7 m/s,🎄 Winter Efteling
+2023-02-11,48%,Quiet,8.5 °C,8.4 °C,0.0 mm/h,0.0 mm/h,3.9 m/s,3.8 m/s,🎄 Winter Efteling
+2023-02-12,50%,Busy,7.2 °C,7.8 °C,0.0 mm/h,0.0 mm/h,1.3 m/s,1.3 m/s,🎄 Winter Efteling
+2023-02-13,20%,Empty,9.2 °C,9.6 °C,0.0 mm/h,0.0 mm/h,2.2 m/s,2.3 m/s,🎄 Winter Efteling
+2023-02-14,11%,Empty,10.1 °C,10.6 °C,0.0 mm/h,0.0 mm/h,2.2 m/s,2.1 m/s,🎄 Winter Efteling
+2023-02-15,16%,Empty,10.6 °C,10.4 °C,0.0 mm/h,0.0 mm/h,3.9 m/s,3.9 m/s,🎄 Winter Efteling
+2023-02-16,6%,Empty,9.9 °C,9.5 °C,0.07 mm/h,0.09 mm/h,5.9 m/s,5.5 m/s,🎄 Winter Efteling
+2023-02-17,22%,Empty,12.1 °C,11.4 °C,0.01 mm/h,0.01 mm/h,10.0 m/s,9.2 m/s,🎄 Winter Efteling
+2023-02-18,19%,Empty,10.7 °C,10.5 °C,0.14 mm/h,0.03 mm/h,8.9 m/s,9.0 m/s,🎄 Winter Efteling
+2023-02-19,26%,Quiet,8.5 °C,8.6 °C,0.02 mm/h,0.01 mm/h,5.0 m/s,5.4 m/s,🎄 Winter Efteling
+2023-02-20,43%,Quiet,10.7 °C,9.5 °C,0.0 mm/h,0.0 mm/h,7.0 m/s,7.3 m/s,🎄 Winter Efteling
+2023-02-21,48%,Quiet,10.3 °C,9.5 °C,0.0 mm/h,0.0 mm/h,4.1 m/s,3.8 m/s,🎄 Winter Efteling
+2023-02-22,37%,Quiet,9.9 °C,9.1 °C,0.09 mm/h,0.06 mm/h,3.7 m/s,3.7 m/s,🎄 Winter Efteling
+2023-02-23,50%,Busy,7.7 °C,7.3 °C,0.02 mm/h,0.03 mm/h,4.4 m/s,4.1 m/s,🎄 Winter Efteling
+2023-02-24,48%,Quiet,6.1 °C,6.3 °C,0.1 mm/h,0.1 mm/h,5.4 m/s,5.8 m/s,🎄 Winter Efteling
+2023-02-25,64%,Busy,5.6 °C,5.7 °C,0.02 mm/h,0.02 mm/h,5.5 m/s,5.8 m/s,🎄 Winter Efteling
+2023-02-26,60%,Busy,4.1 °C,4.0 °C,0.0 mm/h,0.0 mm/h,6.3 m/s,6.4 m/s,🎄 Winter Efteling
+2023-02-27,68%,Busy,5.0 °C,4.8 °C,0.0 mm/h,0.0 mm/h,5.0 m/s,5.0 m/s,🎄 Winter Efteling
+2023-02-28,45%,Quiet,4.3 °C,4.3 °C,0.01 mm/h,0.0 mm/h,4.0 m/s,4.5 m/s,🎄 Winter Efteling
+2023-03-01,72%,Busy,5.3 °C,5.4 °C,0.0 mm/h,0.0 mm/h,4.8 m/s,4.7 m/s,🎄 Winter Efteling
+2023-03-02,60%,Busy,6.9 °C,7.0 °C,0.0 mm/h,0.0 mm/h,5.2 m/s,5.2 m/s,🎄 Winter Efteling
+2023-03-03,69%,Busy,7.0 °C,6.1 °C,0.0 mm/h,0.0 mm/h,3.4 m/s,3.6 m/s,🎄 Winter Efteling
+2023-03-04,55%,Busy,7.3 °C,7.0 °C,0.02 mm/h,0.03 mm/h,4.1 m/s,3.9 m/s,🎄 Winter Efteling
+2023-03-05,26%,Quiet,5.8 °C,5.5 °C,0.05 mm/h,0.05 mm/h,3.7 m/s,3.6 m/s,🎄 Winter Efteling
+2023-03-06,19%,Empty,5.4 °C,5.4 °C,0.1 mm/h,0.09 mm/h,3.8 m/s,4.5 m/s,
+2023-03-07,9%,Empty,3.0 °C,2.7 °C,0.58 mm/h,0.6 mm/h,3.4 m/s,2.5 m/s,
+2023-03-08,11%,Empty,2.1 °C,1.6 °C,0.23 mm/h,0.23 mm/h,5.6 m/s,6.0 m/s,
+2023-03-09,12%,Empty,3.4 °C,2.9 °C,0.4 mm/h,0.51 mm/h,2.8 m/s,2.6 m/s,
+2023-03-10,7%,Empty,6.2 °C,5.0 °C,0.57 mm/h,1.27 mm/h,6.1 m/s,6.8 m/s,
+2023-03-11,21%,Empty,5.9 °C,5.5 °C,0.01 mm/h,0.0 mm/h,3.4 m/s,2.6 m/s,
+2023-03-12,15%,Empty,9.9 °C,9.7 °C,0.05 mm/h,0.04 mm/h,7.1 m/s,6.9 m/s,
+2023-03-13,16%,Empty,14.2 °C,15.0 °C,0.1 mm/h,0.07 mm/h,10.8 m/s,11.0 m/s,
+2023-03-14,11%,Empty,6.5 °C,6.3 °C,0.12 mm/h,0.16 mm/h,8.0 m/s,7.0 m/s,
+2023-03-15,13%,Empty,7.1 °C,7.1 °C,0.03 mm/h,0.02 mm/h,2.9 m/s,3.4 m/s,
+2023-03-16,5%,Empty,10.4 °C,10.9 °C,0.01 mm/h,0.0 mm/h,6.1 m/s,6.3 m/s,
+2023-03-17,16%,Empty,13.9 °C,14.5 °C,0.03 mm/h,0.01 mm/h,4.8 m/s,4.3 m/s,
+2023-03-18,33%,Quiet,14.6 °C,14.2 °C,0.03 mm/h,0.16 mm/h,4.8 m/s,5.0 m/s,
+2023-03-19,41%,Quiet,12.2 °C,12.0 °C,0.08 mm/h,0.02 mm/h,4.1 m/s,4.5 m/s,
+2023-03-20,17%,Empty,8.7 °C,8.3 °C,0.13 mm/h,0.16 mm/h,5.3 m/s,5.1 m/s,
+2023-03-21,10%,Empty,12.6 °C,13.0 °C,0.06 mm/h,0.02 mm/h,6.4 m/s,6.0 m/s,
+2023-03-22,4%,Empty,10.8 °C,10.4 °C,0.15 mm/h,0.26 mm/h,8.7 m/s,8.5 m/s,
+2023-03-23,6%,Empty,13.2 °C,13.1 °C,0.21 mm/h,0.14 mm/h,7.0 m/s,7.6 m/s,
+2023-03-24,14%,Empty,11.9 °C,11.6 °C,0.29 mm/h,0.28 mm/h,8.6 m/s,8.1 m/s,
+2023-03-25,39%,Quiet,10.7 °C,10.4 °C,0.22 mm/h,0.34 mm/h,10.7 m/s,10.7 m/s,
+2023-03-26,5%,Empty,8.2 °C,8.1 °C,0.61 mm/h,0.65 mm/h,3.6 m/s,4.6 m/s,
+2023-03-27,16%,Empty,6.3 °C,6.7 °C,0.07 mm/h,0.05 mm/h,6.8 m/s,6.8 m/s,
+2023-03-28,17%,Empty,7.4 °C,7.2 °C,0.01 mm/h,0.01 mm/h,4.8 m/s,4.7 m/s,
+2023-03-29,52%,Busy,13.0 °C,12.9 °C,0.07 mm/h,0.02 mm/h,5.2 m/s,4.9 m/s,
+2023-03-30,16%,Empty,13.6 °C,14.0 °C,0.17 mm/h,0.22 mm/h,9.5 m/s,9.6 m/s,
+2023-03-31,21%,Empty,10.5 °C,11.0 °C,0.38 mm/h,0.52 mm/h,9.3 m/s,9.5 m/s,
+2023-04-01,8%,Empty,10.2 °C,9.8 °C,0.49 mm/h,0.5 mm/h,5.7 m/s,5.2 m/s,
+2023-04-02,53%,Busy,8.2 °C,6.7 °C,0.0 mm/h,0.0 mm/h,7.0 m/s,5.9 m/s,
+2023-04-03,55%,Busy,8.2 °C,8.1 °C,0.0 mm/h,0.0 mm/h,4.5 m/s,6.7 m/s,
+2023-04-04,49%,Quiet,8.3 °C,8.1 °C,0.0 mm/h,0.0 mm/h,3.0 m/s,3.1 m/s,
+2023-04-05,74%,Busy,9.6 °C,10.2 °C,0.0 mm/h,0.0 mm/h,4.3 m/s,1.6 m/s,
+2023-04-06,85%,Packed,10.4 °C,7.9 °C,0.07 mm/h,0.43 mm/h,4.5 m/s,5.0 m/s,
+2023-04-07,77%,Packed,10.8 °C,9.4 °C,0.0 mm/h,0.0 mm/h,3.0 m/s,4.0 m/s,
+2023-04-08,53%,Busy,,11.3 °C,,0.0 mm/h,,2.4 m/s,
+2023-04-09,69%,Busy,,13.8 °C,,0.0 mm/h,,2.8 m/s,
+2023-04-10,78%,Packed,,13.6 °C,,0.36 mm/h,,6.1 m/s,
+2023-04-11,100%,Packed,,12.3 °C,,0.03 mm/h,,5.6 m/s,
+2023-04-12,24%,Empty,10.7 °C,10.1 °C,0.29 mm/h,0.41 mm/h,5.2 m/s,3.7 m/s,
+2023-04-13,73%,Busy,10.6 °C,11.1 °C,0.04 mm/h,0.17 mm/h,5.7 m/s,5.8 m/s,
+2023-04-14,75%,Packed,11.0 °C,12.9 °C,0.15 mm/h,0.03 mm/h,3.1 m/s,4.4 m/s,
+2023-04-15,41%,Quiet,12.9 °C,12.7 °C,0.0 mm/h,0.0 mm/h,5.0 m/s,6.8 m/s,
+2023-04-16,34%,Quiet,11.7 °C,9.3 °C,0.0 mm/h,0.01 mm/h,4.1 m/s,3.6 m/s,
+2023-04-17,28%,Quiet,13.1 °C,12.0 °C,0.0 mm/h,0.0 mm/h,4.2 m/s,4.7 m/s,
+2023-04-18,11%,Empty,10.1 °C,10.8 °C,0.0 mm/h,0.0 mm/h,5.0 m/s,6.7 m/s,
+2023-04-19,32%,Quiet,12.1 °C,13.9 °C,0.0 mm/h,0.0 mm/h,5.7 m/s,7.8 m/s,
+2023-04-20,30%,Quiet,9.3 °C,9.5 °C,0.08 mm/h,0.08 mm/h,5.8 m/s,6.6 m/s,
+2023-04-21,56%,Busy,12.9 °C,14.1 °C,0.31 mm/h,0.0 mm/h,3.4 m/s,4.9 m/s,
+2023-04-22,26%,Quiet,12.7 °C,12.4 °C,0.62 mm/h,0.19 mm/h,2.0 m/s,2.6 m/s,
+2023-04-23,21%,Empty,13.2 °C,14.2 °C,0.49 mm/h,0.26 mm/h,4.5 m/s,5.2 m/s,
+2023-04-24,36%,Quiet,10.8 °C,9.4 °C,0.01 mm/h,0.0 mm/h,5.7 m/s,6.8 m/s,
+2023-04-25,65%,Busy,9.2 °C,9.1 °C,0.0 mm/h,0.0 mm/h,3.9 m/s,4.8 m/s,
+2023-04-26,35%,Quiet,8.9 °C,8.7 °C,0.0 mm/h,0.0 mm/h,1.3 m/s,1.9 m/s,
+2023-04-27,64%,Busy,11.4 °C,11.8 °C,0.0 mm/h,0.0 mm/h,2.5 m/s,4.0 m/s,
+2023-04-28,42%,Quiet,15.1 °C,13.3 °C,0.05 mm/h,0.01 mm/h,4.8 m/s,3.9 m/s,
+2023-04-29,72%,Busy,13.7 °C,13.7 °C,0.0 mm/h,0.0 mm/h,2.9 m/s,2.9 m/s,
+2023-04-30,84%,Packed,15.3 °C,16.1 °C,0.0 mm/h,0.0 mm/h,3.0 m/s,3.5 m/s,
+2023-05-01,98%,Packed,15.4 °C,15.4 °C,0.11 mm/h,0.02 mm/h,2.3 m/s,3.5 m/s,
+2023-05-02,91%,Packed,12.1 °C,12.5 °C,0.0 mm/h,0.0 mm/h,3.6 m/s,4.3 m/s,
+2023-05-03,79%,Packed,13.2 °C,13.6 °C,0.0 mm/h,0.0 mm/h,3.9 m/s,5.0 m/s,
+2023-05-04,97%,Packed,19.0 °C,20.1 °C,0.0 mm/h,0.0 mm/h,4.5 m/s,4.7 m/s,
+2023-05-05,26%,Quiet,16.9 °C,14.9 °C,0.48 mm/h,0.52 mm/h,2.7 m/s,2.0 m/s,
+2023-05-06,69%,Busy,17.9 °C,18.3 °C,0.01 mm/h,0.03 mm/h,1.6 m/s,2.2 m/s,
+2023-05-07,25%,Quiet,16.1 °C,17.6 °C,0.73 mm/h,0.35 mm/h,1.1 m/s,1.9 m/s,
+2023-05-08,53%,Busy,19.3 °C,18.0 °C,0.0 mm/h,0.0 mm/h,2.5 m/s,2.6 m/s,
+2023-05-09,19%,Empty,14.1 °C,14.2 °C,1.21 mm/h,0.86 mm/h,3.5 m/s,4.1 m/s,
+2023-05-10,7%,Empty,15.0 °C,14.6 °C,1.11 mm/h,0.74 mm/h,2.2 m/s,3.5 m/s,
+2023-05-11,28%,Quiet,14.5 °C,14.8 °C,0.53 mm/h,0.79 mm/h,1.7 m/s,2.6 m/s,
+2023-05-12,30%,Quiet,17.0 °C,18.0 °C,0.0 mm/h,0.03 mm/h,3.8 m/s,6.4 m/s,
+2023-05-13,69%,Busy,19.4 °C,20.2 °C,0.0 mm/h,0.0 mm/h,3.5 m/s,5.2 m/s,
+2023-05-14,61%,Busy,19.2 °C,18.4 °C,0.0 mm/h,0.0 mm/h,2.8 m/s,3.5 m/s,
+2023-05-15,55%,Busy,14.0 °C,13.4 °C,0.28 mm/h,0.04 mm/h,3.4 m/s,4.2 m/s,
+2023-05-16,48%,Quiet,13.3 °C,13.6 °C,0.0 mm/h,0.0 mm/h,4.4 m/s,5.2 m/s,
+2023-05-17,91%,Packed,13.9 °C,14.4 °C,0.0 mm/h,0.0 mm/h,3.0 m/s,5.5 m/s,
+2023-05-18,88%,Packed,12.9 °C,13.7 °C,0.0 mm/h,0.0 mm/h,3.1 m/s,4.1 m/s,
+2023-05-19,99%,Packed,16.8 °C,17.4 °C,0.0 mm/h,0.0 mm/h,3.3 m/s,4.3 m/s,
+2023-05-20,73%,Busy,19.1 °C,19.1 °C,0.0 mm/h,0.0 mm/h,4.9 m/s,6.9 m/s,
+2023-05-21,49%,Quiet,21.1 °C,20.2 °C,0.0 mm/h,0.0 mm/h,3.7 m/s,5.3 m/s,
+2023-05-22,47%,Quiet,21.6 °C,19.2 °C,0.02 mm/h,0.0 mm/h,3.4 m/s,4.2 m/s,
+2023-05-23,18%,Empty,15.2 °C,14.9 °C,0.0 mm/h,0.0 mm/h,5.1 m/s,5.8 m/s,
+2023-05-24,42%,Quiet,15.2 °C,15.0 °C,0.0 mm/h,0.0 mm/h,3.7 m/s,3.6 m/s,
+2023-05-25,44%,Quiet,16.3 °C,16.2 °C,0.0 mm/h,0.0 mm/h,3.6 m/s,4.9 m/s,
+2023-05-26,60%,Busy,16.7 °C,16.9 °C,0.0 mm/h,0.0 mm/h,4.4 m/s,5.8 m/s,
+2023-05-27,39%,Quiet,18.6 °C,19.5 °C,0.0 mm/h,0.0 mm/h,3.1 m/s,3.9 m/s,
+2023-05-28,84%,Packed,20.8 °C,21.6 °C,0.0 mm/h,0.0 mm/h,3.8 m/s,5.5 m/s,
+2023-05-29,70%,Busy,16.9 °C,16.9 °C,0.0 mm/h,0.0 mm/h,4.8 m/s,6.0 m/s,
+2023-05-30,99%,Packed,17.0 °C,17.2 °C,0.0 mm/h,0.0 mm/h,4.3 m/s,5.4 m/s,
+2023-05-31,62%,Busy,21.7 °C,22.2 °C,0.0 mm/h,0.0 mm/h,4.1 m/s,5.4 m/s,
+2023-06-01,65%,Busy,17.4 °C,17.2 °C,0.0 mm/h,0.0 mm/h,4.0 m/s,5.5 m/s,
+2023-06-02,53%,Busy,17.4 °C,15.6 °C,0.0 mm/h,0.0 mm/h,3.5 m/s,4.8 m/s,
+2023-06-03,78%,Packed,20.0 °C,21.4 °C,0.0 mm/h,0.0 mm/h,4.4 m/s,5.7 m/s,
+2023-06-04,68%,Busy,21.3 °C,21.9 °C,0.0 mm/h,0.0 mm/h,3.9 m/s,4.8 m/s,
+2023-06-05,57%,Busy,20.9 °C,20.2 °C,0.0 mm/h,0.0 mm/h,3.7 m/s,5.1 m/s,
+2023-06-06,32%,Quiet,21.8 °C,21.6 °C,0.0 mm/h,0.0 mm/h,3.7 m/s,4.6 m/s,
+2023-06-07,39%,Quiet,20.1 °C,20.6 °C,0.0 mm/h,0.0 mm/h,3.1 m/s,3.9 m/s,
+2023-06-08,38%,Quiet,22.6 °C,23.3 °C,0.0 mm/h,0.0 mm/h,4.0 m/s,5.0 m/s,
+2023-06-09,54%,Busy,26.4 °C,27.3 °C,0.0 mm/h,0.0 mm/h,3.4 m/s,4.3 m/s,
+2023-06-10,60%,Busy,28.1 °C,29.3 °C,0.0 mm/h,0.0 mm/h,3.5 m/s,4.8 m/s,
+2023-06-11,68%,Busy,29.1 °C,29.7 °C,0.0 mm/h,0.0 mm/h,4.2 m/s,4.7 m/s,
+2023-06-12,54%,Busy,28.3 °C,29.0 °C,0.0 mm/h,0.0 mm/h,3.6 m/s,4.7 m/s,
+2023-06-13,48%,Quiet,26.3 °C,26.7 °C,0.0 mm/h,0.0 mm/h,4.1 m/s,5.4 m/s,
+2023-06-14,31%,Quiet,24.9 °C,25.2 °C,0.0 mm/h,0.0 mm/h,4.6 m/s,5.4 m/s,
+2023-06-15,46%,Quiet,25.2 °C,25.7 °C,0.0 mm/h,0.0 mm/h,3.0 m/s,3.4 m/s,
+2023-06-16,77%,Packed,25.1 °C,25.8 °C,0.0 mm/h,0.0 mm/h,1.8 m/s,2.6 m/s,
+2023-06-17,55%,Busy,26.8 °C,26.5 °C,0.0 mm/h,0.0 mm/h,1.2 m/s,2.3 m/s,
+2023-06-18,41%,Quiet,25.1 °C,23.5 °C,0.0 mm/h,0.01 mm/h,2.4 m/s,2.5 m/s,
+2023-06-19,93%,Packed,23.7 °C,24.0 °C,0.0 mm/h,0.0 mm/h,3.3 m/s,3.6 m/s,
+2023-06-20,58%,Busy,24.2 °C,25.9 °C,0.61 mm/h,0.04 mm/h,4.0 m/s,3.6 m/s,
+2023-06-21,69%,Busy,23.3 °C,24.2 °C,0.0 mm/h,0.0 mm/h,3.6 m/s,3.6 m/s,
+2023-06-22,62%,Busy,21.8 °C,20.4 °C,0.58 mm/h,0.61 mm/h,2.5 m/s,3.3 m/s,
+2023-06-23,86%,Packed,23.5 °C,24.2 °C,0.0 mm/h,0.0 mm/h,3.0 m/s,3.0 m/s,
+2023-06-24,66%,Busy,24.9 °C,25.8 °C,0.0 mm/h,0.0 mm/h,2.2 m/s,2.5 m/s,
+2023-06-25,36%,Quiet,29.5 °C,29.8 °C,0.0 mm/h,0.0 mm/h,2.8 m/s,3.6 m/s,
+2023-06-26,92%,Packed,21.4 °C,21.5 °C,0.0 mm/h,0.0 mm/h,5.0 m/s,6.4 m/s,
+2023-06-27,82%,Packed,20.8 °C,21.4 °C,0.0 mm/h,0.0 mm/h,3.7 m/s,4.6 m/s,
+2023-06-28,72%,Busy,20.3 °C,21.1 °C,0.0 mm/h,0.0 mm/h,2.7 m/s,2.9 m/s,
+2023-06-29,76%,Packed,22.7 °C,21.5 °C,0.01 mm/h,0.0 mm/h,3.5 m/s,3.8 m/s,
+2023-06-30,45%,Quiet,20.0 °C,20.7 °C,0.01 mm/h,0.0 mm/h,3.4 m/s,3.3 m/s,
+2023-07-01,60%,Busy,18.7 °C,18.5 °C,0.02 mm/h,0.05 mm/h,3.6 m/s,4.6 m/s,
+2023-07-02,68%,Busy,19.8 °C,19.3 °C,0.0 mm/h,0.0 mm/h,4.9 m/s,5.5 m/s,
+2023-07-03,76%,Packed,19.1 °C,19.0 °C,0.0 mm/h,0.01 mm/h,5.6 m/s,5.9 m/s,
+2023-07-04,52%,Busy,18.3 °C,19.2 °C,0.13 mm/h,0.02 mm/h,3.5 m/s,3.8 m/s,
+2023-07-05,58%,Busy,17.4 °C,18.1 °C,0.19 mm/h,0.03 mm/h,5.9 m/s,7.0 m/s,
+2023-07-06,81%,Packed,20.3 °C,20.6 °C,0.0 mm/h,0.0 mm/h,3.0 m/s,3.3 m/s,
+2023-07-07,53%,Busy,26.0 °C,26.9 °C,0.0 mm/h,0.0 mm/h,2.5 m/s,3.4 m/s,
+2023-07-08,52%,Busy,30.7 °C,30.1 °C,0.0 mm/h,0.0 mm/h,1.9 m/s,2.4 m/s,
+2023-07-09,25%,Quiet,25.2 °C,25.5 °C,0.28 mm/h,0.08 mm/h,2.7 m/s,3.6 m/s,
+2023-07-10,69%,Busy,23.6 °C,24.6 °C,0.0 mm/h,0.0 mm/h,3.1 m/s,2.9 m/s,
+2023-07-11,48%,Quiet,25.8 °C,26.7 °C,0.0 mm/h,0.0 mm/h,4.1 m/s,5.1 m/s,
+2023-07-12,60%,Busy,21.0 °C,20.5 °C,0.0 mm/h,0.0 mm/h,4.7 m/s,4.6 m/s,
+2023-07-13,76%,Packed,20.7 °C,20.1 °C,0.03 mm/h,0.02 mm/h,3.7 m/s,4.3 m/s,
+2023-07-14,54%,Busy,22.4 °C,22.6 °C,0.0 mm/h,0.02 mm/h,3.0 m/s,3.0 m/s,
+2023-07-15,53%,Busy,23.7 °C,23.2 °C,0.01 mm/h,0.08 mm/h,5.0 m/s,5.9 m/s,
+2023-07-16,44%,Quiet,21.3 °C,20.2 °C,0.01 mm/h,0.0 mm/h,4.9 m/s,5.2 m/s,
+2023-07-17,45%,Quiet,19.8 °C,19.8 °C,0.05 mm/h,0.03 mm/h,4.2 m/s,5.2 m/s,
+2023-07-18,52%,Busy,22.3 °C,22.2 °C,0.0 mm/h,0.0 mm/h,2.3 m/s,2.8 m/s,
+2023-07-19,52%,Busy,20.3 °C,20.8 °C,0.02 mm/h,0.0 mm/h,4.0 m/s,4.8 m/s,
+2023-07-20,45%,Quiet,20.3 °C,19.7 °C,0.0 mm/h,0.0 mm/h,2.2 m/s,1.9 m/s,
+2023-07-21,42%,Quiet,18.5 °C,18.9 °C,0.04 mm/h,0.05 mm/h,3.2 m/s,4.3 m/s,
+2023-07-22,52%,Busy,18.6 °C,18.9 °C,0.02 mm/h,0.07 mm/h,3.2 m/s,4.3 m/s,
+2023-07-23,19%,Empty,18.5 °C,19.0 °C,0.25 mm/h,0.04 mm/h,4.9 m/s,6.1 m/s,
+2023-07-24,26%,Quiet,18.2 °C,18.2 °C,0.25 mm/h,0.0 mm/h,4.0 m/s,4.2 m/s,
+2023-07-25,87%,Packed,17.7 °C,18.3 °C,0.01 mm/h,0.0 mm/h,3.6 m/s,4.3 m/s,
+2023-07-26,66%,Busy,18.6 °C,19.7 °C,0.09 mm/h,0.04 mm/h,3.2 m/s,3.7 m/s,
+2023-07-27,6%,Empty,17.4 °C,17.9 °C,0.18 mm/h,0.04 mm/h,4.3 m/s,4.5 m/s,
+2023-07-28,31%,Quiet,21.9 °C,21.2 °C,0.0 mm/h,0.0 mm/h,3.4 m/s,2.9 m/s,
+2023-07-29,38%,Quiet,19.1 °C,20.3 °C,0.13 mm/h,0.24 mm/h,3.9 m/s,3.9 m/s,
+2023-07-30,57%,Busy,18.8 °C,18.4 °C,0.49 mm/h,0.52 mm/h,5.3 m/s,5.4 m/s,
+2023-07-31,16%,Empty,18.3 °C,17.7 °C,0.14 mm/h,0.67 mm/h,4.7 m/s,5.3 m/s,
+2023-08-01,42%,Quiet,17.8 °C,18.4 °C,0.04 mm/h,0.12 mm/h,4.5 m/s,5.0 m/s,
+2023-08-02,10%,Empty,19.3 °C,19.3 °C,0.32 mm/h,0.19 mm/h,5.6 m/s,5.7 m/s,
+2023-08-03,24%,Empty,16.8 °C,17.5 °C,0.69 mm/h,0.49 mm/h,4.1 m/s,5.2 m/s,
+2023-08-04,50%,Busy,17.6 °C,18.9 °C,0.26 mm/h,0.12 mm/h,2.6 m/s,4.2 m/s,
+2023-08-05,23%,Empty,16.0 °C,16.0 °C,0.56 mm/h,0.35 mm/h,3.8 m/s,4.2 m/s,
+2023-08-06,8%,Empty,16.0 °C,15.5 °C,0.38 mm/h,0.52 mm/h,4.9 m/s,5.9 m/s,
+2023-08-07,62%,Busy,17.2 °C,17.6 °C,0.0 mm/h,0.0 mm/h,4.8 m/s,6.4 m/s,
+2023-08-08,49%,Quiet,17.7 °C,17.1 °C,0.04 mm/h,0.25 mm/h,4.2 m/s,4.8 m/s,
+2023-08-09,93%,Packed,19.2 °C,19.4 °C,0.0 mm/h,0.0 mm/h,3.1 m/s,3.9 m/s,
+2023-08-10,92%,Packed,21.0 °C,22.6 °C,0.0 mm/h,0.0 mm/h,1.1 m/s,2.0 m/s,
+2023-08-11,67%,Busy,25.0 °C,24.7 °C,0.0 mm/h,0.02 mm/h,2.5 m/s,3.1 m/s,
+2023-08-12,60%,Busy,22.2 °C,21.2 °C,0.02 mm/h,0.0 mm/h,2.9 m/s,3.9 m/s,
+2023-08-13,78%,Packed,21.4 °C,20.9 °C,0.0 mm/h,0.0 mm/h,3.0 m/s,3.1 m/s,
+2023-08-14,83%,Packed,23.9 °C,24.4 °C,0.0 mm/h,0.0 mm/h,2.4 m/s,2.8 m/s,
+2023-08-15,85%,Packed,21.8 °C,22.1 °C,0.0 mm/h,0.0 mm/h,2.8 m/s,3.6 m/s,
+2023-08-16,89%,Packed,22.2 °C,22.0 °C,0.0 mm/h,0.0 mm/h,2.6 m/s,3.7 m/s,
+2023-08-17,75%,Packed,21.4 °C,19.3 °C,0.0 mm/h,0.0 mm/h,3.0 m/s,3.9 m/s,
+2023-08-18,56%,Busy,24.8 °C,22.6 °C,0.0 mm/h,0.0 mm/h,2.4 m/s,2.7 m/s,
+2023-08-19,71%,Busy,22.6 °C,23.4 °C,0.11 mm/h,0.0 mm/h,2.7 m/s,3.4 m/s,
+2023-08-20,51%,Busy,23.1 °C,24.2 °C,0.0 mm/h,0.0 mm/h,2.3 m/s,2.7 m/s,
+2023-08-21,48%,Quiet,23.9 °C,23.6 °C,0.0 mm/h,0.0 mm/h,1.7 m/s,2.5 m/s,
+2023-08-22,51%,Busy,22.9 °C,21.9 °C,0.0 mm/h,0.0 mm/h,2.4 m/s,2.8 m/s,
+2023-08-23,59%,Busy,23.4 °C,23.7 °C,0.0 mm/h,0.0 mm/h,1.6 m/s,2.3 m/s,
+2023-08-24,43%,Quiet,22.4 °C,22.9 °C,0.13 mm/h,0.12 mm/h,2.1 m/s,2.7 m/s,
+2023-08-25,35%,Quiet,20.7 °C,20.2 °C,0.07 mm/h,0.52 mm/h,2.8 m/s,3.0 m/s,
+2023-08-26,77%,Packed,17.9 °C,17.9 °C,0.09 mm/h,0.0 mm/h,3.4 m/s,3.8 m/s,
+2023-08-27,36%,Quiet,17.3 °C,16.4 °C,0.02 mm/h,0.05 mm/h,4.1 m/s,4.1 m/s,
+2023-08-28,75%,Packed,18.4 °C,18.0 °C,0.08 mm/h,0.08 mm/h,1.6 m/s,2.2 m/s,
+2023-08-29,36%,Quiet,18.4 °C,17.6 °C,0.0 mm/h,0.0 mm/h,2.0 m/s,2.2 m/s,
+2023-08-30,15%,Empty,15.7 °C,16.8 °C,0.41 mm/h,0.11 mm/h,3.2 m/s,5.1 m/s,
+2023-08-31,21%,Empty,16.5 °C,17.5 °C,0.0 mm/h,0.0 mm/h,3.4 m/s,3.1 m/s,
+2023-09-01,8%,Empty,18.1 °C,18.4 °C,0.52 mm/h,0.45 mm/h,1.6 m/s,1.7 m/s,
+2023-09-02,77%,Packed,20.7 °C,19.4 °C,0.13 mm/h,0.0 mm/h,0.7 m/s,2.3 m/s,
+2023-09-03,54%,Busy,20.6 °C,21.6 °C,0.0 mm/h,0.0 mm/h,1.4 m/s,1.9 m/s,
+2023-09-04,19%,Empty,23.4 °C,23.2 °C,0.0 mm/h,0.0 mm/h,2.9 m/s,3.5 m/s,
+2023-09-05,5%,Empty,26.4 °C,26.8 °C,0.0 mm/h,0.0 mm/h,2.8 m/s,3.5 m/s,
+2023-09-06,4%,Empty,27.6 °C,27.8 °C,0.0 mm/h,0.0 mm/h,1.9 m/s,2.9 m/s,
+2023-09-07,6%,Empty,26.9 °C,27.2 °C,0.0 mm/h,0.0 mm/h,3.0 m/s,4.0 m/s,
+2023-09-08,29%,Quiet,28.0 °C,28.0 °C,0.0 mm/h,0.0 mm/h,1.5 m/s,2.0 m/s,
+2023-09-09,60%,Busy,27.5 °C,26.4 °C,0.0 mm/h,0.0 mm/h,0.5 m/s,1.5 m/s,
+2023-09-10,36%,Quiet,29.6 °C,29.2 °C,0.0 mm/h,0.0 mm/h,1.8 m/s,1.9 m/s,
+2023-09-11,7%,Empty,26.6 °C,26.1 °C,0.0 mm/h,0.0 mm/h,2.5 m/s,3.5 m/s,
+2023-09-12,17%,Empty,22.9 °C,23.1 °C,0.0 mm/h,0.0 mm/h,2.5 m/s,1.8 m/s,
+2023-09-13,9%,Empty,18.4 °C,18.6 °C,0.06 mm/h,0.0 mm/h,3.5 m/s,5.4 m/s,
+2023-09-14,19%,Empty,18.4 °C,19.5 °C,0.0 mm/h,0.0 mm/h,1.6 m/s,1.9 m/s,
+2023-09-15,25%,Quiet,20.4 °C,20.5 °C,0.0 mm/h,0.0 mm/h,1.7 m/s,2.2 m/s,
+2023-09-16,79%,Packed,22.8 °C,23.0 °C,0.0 mm/h,0.12 mm/h,1.6 m/s,2.4 m/s,
+2023-09-17,69%,Busy,21.9 °C,19.4 °C,0.0 mm/h,0.0 mm/h,2.0 m/s,1.7 m/s,
+2023-09-18,40%,Quiet,21.9 °C,20.0 °C,0.0 mm/h,0.09 mm/h,5.5 m/s,6.6 m/s,
+2023-09-19,25%,Quiet,17.5 °C,18.3 °C,0.04 mm/h,0.0 mm/h,6.0 m/s,7.6 m/s,
+2023-09-20,21%,Empty,20.0 °C,20.2 °C,0.0 mm/h,0.06 mm/h,5.8 m/s,6.8 m/s,
+2023-09-21,4%,Empty,17.3 °C,15.3 °C,0.69 mm/h,2.23 mm/h,3.7 m/s,2.3 m/s,
+2023-09-22,32%,Quiet,15.5 °C,15.5 °C,0.0 mm/h,0.28 mm/h,4.9 m/s,4.4 m/s,
+2023-09-23,65%,Busy,14.9 °C,15.2 °C,0.05 mm/h,0.14 mm/h,3.9 m/s,4.1 m/s,
+2023-09-24,80%,Packed,17.1 °C,17.8 °C,0.0 mm/h,0.0 mm/h,3.2 m/s,4.6 m/s,
+2023-09-25,57%,Busy,18.7 °C,19.4 °C,0.0 mm/h,0.0 mm/h,2.7 m/s,3.6 m/s,
+2023-09-26,5%,Empty,19.7 °C,20.0 °C,0.0 mm/h,0.0 mm/h,2.2 m/s,2.4 m/s,
+2023-09-27,27%,Quiet,20.2 °C,20.9 °C,0.0 mm/h,0.0 mm/h,2.3 m/s,2.6 m/s,
+2023-09-28,38%,Quiet,18.9 °C,19.1 °C,0.01 mm/h,0.0 mm/h,3.2 m/s,3.4 m/s,
+2023-09-29,66%,Busy,20.7 °C,19.0 °C,0.0 mm/h,0.04 mm/h,4.4 m/s,5.1 m/s,
+2023-09-30,79%,Packed,17.3 °C,16.9 °C,0.0 mm/h,0.0 mm/h,2.4 m/s,2.7 m/s,
+2023-10-01,85%,Packed,19.6 °C,21.2 °C,0.0 mm/h,0.0 mm/h,2.8 m/s,3.4 m/s,
+2023-10-02,98%,Packed,21.8 °C,22.2 °C,0.0 mm/h,0.0 mm/h,2.2 m/s,2.6 m/s,
+2023-10-03,37%,Quiet,16.6 °C,16.0 °C,0.26 mm/h,0.09 mm/h,5.2 m/s,5.8 m/s,
+2023-10-04,47%,Quiet,15.6 °C,16.0 °C,0.0 mm/h,0.0 mm/h,4.2 m/s,4.3 m/s,
+2023-10-05,83%,Packed,15.6 °C,16.6 °C,0.0 mm/h,0.0 mm/h,3.4 m/s,3.8 m/s,
+2023-10-06,81%,Packed,17.3 °C,17.7 °C,0.0 mm/h,0.0 mm/h,4.2 m/s,4.8 m/s,
+2023-10-07,92%,Packed,19.4 °C,20.2 °C,0.0 mm/h,0.0 mm/h,4.7 m/s,5.1 m/s,
+2023-10-08,84%,Packed,19.3 °C,18.0 °C,0.0 mm/h,0.0 mm/h,1.6 m/s,2.0 m/s,
+2023-10-09,57%,Busy,19.7 °C,19.6 °C,0.0 mm/h,0.0 mm/h,2.8 m/s,3.6 m/s,
+2023-10-10,52%,Busy,19.1 °C,19.9 °C,0.0 mm/h,0.0 mm/h,3.1 m/s,3.6 m/s,
+2023-10-11,59%,Busy,19.8 °C,18.4 °C,0.0 mm/h,0.0 mm/h,4.8 m/s,4.9 m/s,
+2023-10-12,12%,Empty,16.6 °C,16.4 °C,0.53 mm/h,0.58 mm/h,3.0 m/s,3.6 m/s,
+2023-10-13,42%,Quiet,19.6 °C,21.0 °C,0.21 mm/h,0.09 mm/h,5.9 m/s,6.7 m/s,
+2023-10-14,52%,Busy,12.5 °C,12.4 °C,0.0 mm/h,0.01 mm/h,4.3 m/s,5.4 m/s,
+2023-10-15,51%,Busy,10.0 °C,8.8 °C,0.06 mm/h,0.07 mm/h,3.1 m/s,2.6 m/s,
+2023-10-16,74%,Busy,10.7 °C,11.1 °C,0.0 mm/h,0.0 mm/h,1.3 m/s,1.5 m/s,
+2023-10-17,86%,Packed,11.0 °C,11.2 °C,0.0 mm/h,0.0 mm/h,3.5 m/s,5.6 m/s,
+2023-10-18,84%,Packed,11.9 °C,12.3 °C,0.01 mm/h,0.0 mm/h,4.8 m/s,5.9 m/s,
+2023-10-19,45%,Quiet,15.9 °C,16.5 °C,0.19 mm/h,0.0 mm/h,2.8 m/s,3.6 m/s,
+2023-10-20,8%,Empty,13.6 °C,13.6 °C,1.03 mm/h,1.13 mm/h,2.7 m/s,4.9 m/s,
+2023-10-21,51%,Busy,13.9 °C,14.3 °C,0.22 mm/h,0.21 mm/h,5.1 m/s,7.5 m/s,
+2023-10-22,64%,Busy,13.4 °C,13.5 °C,0.03 mm/h,0.03 mm/h,3.2 m/s,3.1 m/s,
+2023-10-23,77%,Packed,12.6 °C,11.9 °C,0.03 mm/h,0.05 mm/h,2.9 m/s,3.5 m/s,
+2023-10-24,25%,Quiet,12.1 °C,12.6 °C,0.31 mm/h,0.29 mm/h,4.7 m/s,4.3 m/s,
+2023-10-25,17%,Empty,10.5 °C,10.3 °C,1.22 mm/h,0.96 mm/h,2.8 m/s,3.5 m/s,
+2023-10-26,16%,Empty,11.3 °C,10.2 °C,0.24 mm/h,0.02 mm/h,2.0 m/s,2.5 m/s,
+2023-10-27,11%,Empty,11.8 °C,11.7 °C,0.41 mm/h,0.66 mm/h,2.5 m/s,2.8 m/s,
+2023-10-28,43%,Quiet,12.4 °C,13.1 °C,0.01 mm/h,0.03 mm/h,4.1 m/s,5.5 m/s,
+2023-10-29,44%,Quiet,13.6 °C,13.4 °C,0.04 mm/h,0.3 mm/h,4.9 m/s,6.3 m/s,
+2023-10-30,66%,Busy,13.2 °C,12.4 °C,0.02 mm/h,0.47 mm/h,2.7 m/s,3.0 m/s,
+2023-10-31,31%,Quiet,12.5 °C,11.0 °C,0.1 mm/h,0.16 mm/h,3.4 m/s,3.5 m/s,
+2023-11-01,60%,Busy,12.9 °C,13.3 °C,0.05 mm/h,0.12 mm/h,5.2 m/s,7.1 m/s,
+2023-11-02,39%,Quiet,12.0 °C,12.1 °C,0.03 mm/h,0.36 mm/h,8.7 m/s,12.4 m/s,
+2023-11-03,41%,Quiet,9.9 °C,10.3 °C,0.0 mm/h,0.0 mm/h,5.9 m/s,6.6 m/s,
+2023-11-04,35%,Quiet,9.5 °C,9.5 °C,0.63 mm/h,0.77 mm/h,5.5 m/s,5.4 m/s,
+2023-11-05,36%,Quiet,10.9 °C,11.0 °C,0.09 mm/h,0.15 mm/h,6.1 m/s,5.6 m/s,
+2023-11-06,37%,Quiet,10.6 °C,10.7 °C,0.0 mm/h,0.0 mm/h,6.1 m/s,5.7 m/s,
+2023-11-07,18%,Empty,10.3 °C,10.6 °C,0.1 mm/h,0.05 mm/h,5.2 m/s,5.3 m/s,
+2023-11-08,22%,Empty,9.9 °C,9.9 °C,0.18 mm/h,0.26 mm/h,6.0 m/s,7.5 m/s,
+2023-11-09,18%,Empty,10.1 °C,10.2 °C,0.18 mm/h,0.08 mm/h,4.9 m/s,5.8 m/s,
+2023-11-10,22%,Empty,8.4 °C,8.4 °C,0.25 mm/h,0.16 mm/h,3.7 m/s,4.9 m/s,
+2023-11-11,83%,Packed,7.8 °C,8.2 °C,0.0 mm/h,0.05 mm/h,3.2 m/s,3.5 m/s,
+2023-11-12,85%,Packed,7.6 °C,5.8 °C,0.0 mm/h,0.0 mm/h,1.6 m/s,1.8 m/s,
+2023-11-13,17%,Empty,13.3 °C,13.4 °C,0.56 mm/h,0.43 mm/h,5.8 m/s,6.9 m/s,🎄 Winter Efteling
+2023-11-14,27%,Quiet,11.8 °C,11.7 °C,0.09 mm/h,0.48 mm/h,5.2 m/s,4.9 m/s,🎄 Winter Efteling
+2023-11-15,10%,Empty,10.4 °C,11.1 °C,0.13 mm/h,0.11 mm/h,5.3 m/s,5.4 m/s,🎄 Winter Efteling
+2023-11-16,21%,Empty,7.9 °C,7.9 °C,0.0 mm/h,0.0 mm/h,1.9 m/s,2.6 m/s,🎄 Winter Efteling
+2023-11-17,14%,Empty,8.0 °C,7.3 °C,0.01 mm/h,0.0 mm/h,1.5 m/s,2.1 m/s,🎄 Winter Efteling
+2023-11-18,40%,Quiet,8.1 °C,8.5 °C,1.0 mm/h,1.0 mm/h,4.4 m/s,6.0 m/s,🎄 Winter Efteling
+2023-11-19,41%,Quiet,12.1 °C,12.7 °C,0.3 mm/h,0.17 mm/h,6.1 m/s,6.1 m/s,🎄 Winter Efteling
+2023-11-20,11%,Empty,9.9 °C,10.3 °C,0.33 mm/h,0.05 mm/h,3.3 m/s,3.1 m/s,🎄 Winter Efteling
+2023-11-21,15%,Empty,9.5 °C,10.0 °C,0.0 mm/h,0.05 mm/h,2.3 m/s,4.0 m/s,🎄 Winter Efteling
+2023-11-22,23%,Empty,4.8 °C,4.2 °C,0.0 mm/h,0.0 mm/h,2.4 m/s,3.4 m/s,🎄 Winter Efteling
+2023-11-23,18%,Empty,11.6 °C,12.1 °C,0.0 mm/h,0.0 mm/h,5.2 m/s,6.3 m/s,🎄 Winter Efteling
+2023-11-24,20%,Empty,7.0 °C,6.3 °C,0.09 mm/h,0.16 mm/h,5.9 m/s,6.7 m/s,🎄 Winter Efteling
+2023-11-25,53%,Busy,7.3 °C,6.8 °C,0.02 mm/h,0.04 mm/h,4.2 m/s,4.9 m/s,🎄 Winter Efteling
+2023-11-26,42%,Quiet,6.8 °C,6.5 °C,0.08 mm/h,0.17 mm/h,3.0 m/s,2.7 m/s,🎄 Winter Efteling
+2023-11-27,16%,Empty,5.3 °C,5.9 °C,0.6 mm/h,1.75 mm/h,3.7 m/s,2.6 m/s,🎄 Winter Efteling
+2023-11-28,15%,Empty,1.8 °C,2.8 °C,0.0 mm/h,0.0 mm/h,1.7 m/s,1.9 m/s,🎄 Winter Efteling
+2023-11-29,11%,Empty,4.2 °C,2.7 °C,0.1 mm/h,0.04 mm/h,2.2 m/s,2.3 m/s,🎄 Winter Efteling
+2023-11-30,14%,Empty,1.0 °C,1.7 °C,0.0 mm/h,0.0 mm/h,1.1 m/s,2.0 m/s,🎄 Winter Efteling
+2023-12-01,27%,Quiet,0.1 °C,0.1 °C,0.0 mm/h,0.0 mm/h,2.2 m/s,3.5 m/s,🎄 Winter Efteling
+2023-12-02,91%,Packed,0.2 °C,0.4 °C,0.0 mm/h,0.0 mm/h,1.7 m/s,2.2 m/s,🎄 Winter Efteling
+2023-12-03,89%,Packed,0.3 °C,1.3 °C,0.49 mm/h,0.35 mm/h,4.4 m/s,5.2 m/s,🎄 Winter Efteling
+2023-12-04,19%,Empty,1.7 °C,2.1 °C,0.48 mm/h,0.2 mm/h,4.1 m/s,4.9 m/s,🎄 Winter Efteling
+2023-12-05,12%,Empty,2.4 °C,2.5 °C,0.04 mm/h,0.03 mm/h,2.8 m/s,3.2 m/s,🎄 Winter Efteling
+2023-12-06,59%,Busy,4.8 °C,5.0 °C,0.0 mm/h,0.0 mm/h,2.5 m/s,2.6 m/s,🎄 Winter Efteling
+2023-12-07,13%,Empty,3.0 °C,3.4 °C,0.0 mm/h,0.0 mm/h,3.1 m/s,3.9 m/s,🎄 Winter Efteling
+2023-12-08,28%,Quiet,7.2 °C,7.5 °C,0.03 mm/h,0.0 mm/h,2.7 m/s,3.6 m/s,🎄 Winter Efteling
+2023-12-09,75%,Packed,8.3 °C,8.3 °C,0.63 mm/h,0.8 mm/h,5.6 m/s,6.7 m/s,🎄 Winter Efteling
+2023-12-10,88%,Packed,8.6 °C,9.8 °C,0.18 mm/h,0.46 mm/h,5.3 m/s,6.5 m/s,🎄 Winter Efteling
+2023-12-11,12%,Empty,9.6 °C,9.9 °C,0.03 mm/h,0.15 mm/h,5.2 m/s,5.0 m/s,🎄 Winter Efteling
+2023-12-12,3%,Empty,9.6 °C,10.1 °C,0.38 mm/h,0.36 mm/h,3.1 m/s,3.8 m/s,🎄 Winter Efteling
+2023-12-13,3%,Empty,8.5 °C,8.4 °C,0.03 mm/h,0.06 mm/h,1.8 m/s,1.5 m/s,🎄 Winter Efteling
+2023-12-14,5%,Empty,5.9 °C,5.6 °C,0.0 mm/h,0.01 mm/h,1.9 m/s,1.9 m/s,🎄 Winter Efteling
+2023-12-15,25%,Quiet,7.9 °C,8.8 °C,0.0 mm/h,0.0 mm/h,2.7 m/s,2.2 m/s,🎄 Winter Efteling
+2023-12-16,90%,Packed,7.7 °C,8.8 °C,0.0 mm/h,0.0 mm/h,3.3 m/s,4.0 m/s,🎄 Winter Efteling
+2023-12-17,81%,Packed,7.6 °C,8.2 °C,0.01 mm/h,0.0 mm/h,3.8 m/s,4.6 m/s,🎄 Winter Efteling
+2023-12-18,35%,Quiet,6.4 °C,6.5 °C,0.0 mm/h,0.0 mm/h,4.8 m/s,5.4 m/s,🎄 Winter Efteling
+2023-12-19,31%,Quiet,6.6 °C,7.7 °C,0.79 mm/h,1.26 mm/h,5.1 m/s,5.0 m/s,🎄 Winter Efteling
+2023-12-20,45%,Quiet,7.4 °C,8.2 °C,0.35 mm/h,0.24 mm/h,5.1 m/s,5.5 m/s,🎄 Winter Efteling
+2023-12-21,41%,Quiet,10.5 °C,11.5 °C,0.36 mm/h,0.48 mm/h,8.3 m/s,9.5 m/s,🎄 Winter Efteling
+2023-12-22,48%,Quiet,9.3 °C,10.6 °C,0.36 mm/h,0.34 mm/h,7.3 m/s,9.6 m/s,🎄 Winter Efteling
+2023-12-23,34%,Quiet,10.2 °C,10.9 °C,0.0 mm/h,0.0 mm/h,7.0 m/s,7.6 m/s,🎄 Winter Efteling
+2023-12-24,5%,Empty,11.8 °C,12.4 °C,0.2 mm/h,1.38 mm/h,7.3 m/s,7.6 m/s,🎄 Winter Efteling
+2023-12-25,24%,Empty,11.9 °C,11.2 °C,0.64 mm/h,0.41 mm/h,5.0 m/s,4.6 m/s,🎄 Winter Efteling
+2023-12-26,78%,Packed,8.5 °C,8.7 °C,0.0 mm/h,0.01 mm/h,4.7 m/s,4.4 m/s,🎄 Winter Efteling
+2023-12-27,87%,Packed,8.6 °C,9.2 °C,0.01 mm/h,0.01 mm/h,5.4 m/s,6.6 m/s,🎄 Winter Efteling
+2023-12-28,99%,Packed,9.5 °C,11.0 °C,0.0 mm/h,0.0 mm/h,6.4 m/s,7.6 m/s,🎄 Winter Efteling
+2023-12-29,76%,Packed,9.7 °C,10.4 °C,0.13 mm/h,0.39 mm/h,6.1 m/s,6.2 m/s,🎄 Winter Efteling
+2023-12-30,82%,Packed,8.6 °C,9.3 °C,0.01 mm/h,0.0 mm/h,4.4 m/s,5.2 m/s,🎄 Winter Efteling
+2023-12-31,31%,Quiet,8.9 °C,9.2 °C,0.14 mm/h,0.2 mm/h,6.1 m/s,7.7 m/s,🎄 Winter Efteling
