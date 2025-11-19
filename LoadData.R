@@ -55,3 +55,83 @@ test %>%
   group_by(attraction_name, queue_type) %>%
   summarise(averagequeue = mean(wait_time, na.rm = TRUE)) %>%
   print(n = 40)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Load raw data 
+raw_weather <- read_csv("Temp/efteling_parkinfo_all_years.csv")
+raw_rides <- read_csv("Temp/efteling_rides_all_years.csv")
+
+
+#Convert the things behind the values so these become numeric
+weather <- raw_weather %>%
+  mutate(
+    crowd_percent = as.numeric(str_remove(crowd_percent, "%")),
+    
+    temperature_forecast = as.numeric(str_remove(temperature_forecast, "°C")),
+    temperature_actual   = as.numeric(str_remove(temperature_actual, "°C")),
+    
+    intensity_forecast   = as.numeric(str_remove(intensity_forecast, "mm/h")),
+    intensity_actual     = as.numeric(str_remove(intensity_actual, "mm/h")),
+    
+    wind_forecast        = as.numeric(str_remove(wind_forecast, "m/s")),
+    wind_actual          = as.numeric(str_remove(wind_actual, "m/s"))
+  )
+
+#Select only attractions that HAVE a queue time
+rides <- raw_rides %>%
+  filter(ride %in% c(
+    "Baron 1898",
+    "Baron 1898 Single-rider",
+    "Carnaval Festival",
+    "De Oude Tufferbaan",
+    "De Vliegende Hollander",
+    "De Vliegende Hollander Single-rider",
+    "Droomvlucht",
+    "Droomvlucht VR",
+    "Fabula",
+    "Fata Morgana",
+    "Gondoletta",
+    "Halve Maen",
+    "Joris en de Draak",
+    "Joris en de Draak Single-rider",
+    "Kinderspoor",
+    "Max & Moritz",
+    "Max & Moritz Single-rider",
+    "Monorail",
+    "Pagode",
+    "Piraña",
+    "Python",
+    "Python Single-rider",
+    "Sirocco",
+    "Stoomcarrousel",
+    "Stoomtrein Marerijk",
+    "Stoomtrein Ruigrijk",
+    "Symbolica",
+    "Symbolica Single-rider",
+    "The Six Swans",
+    "Villa Volta",
+    "Vogel Rok",
+    "Droomvlucht Regular Queue",
+    "Danse Macabre",
+    "Danse Macabre Single-rider"
+  ))
+
+#Merge the weather and ride file based on the data
+efteling_dataset <- rides %>%
+  left_join(weather, by = "date")
+
+#Check if the dataset has missing values
+colSums(is.na(efteling_dataset))
