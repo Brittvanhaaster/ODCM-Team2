@@ -138,9 +138,7 @@ colSums(is.na(efteling_dataset))
 
 
 
-library(dplyr)
-library(ggplot2)
-library(lubridate)  # makes date handling easier
+library(lubridate)
 
 # Assuming your dataset is called 'weather'
 efteling_dataset <- efteling_dataset %>%
