@@ -138,6 +138,15 @@ colSums(is.na(efteling_dataset))
 
 
 
+library(dplyr)
+library(ggplot2)
+library(lubridate)  # makes date handling easier
+
+# Assuming your dataset is called 'weather'
+efteling_dataset <- efteling_dataset %>%
+  mutate(date = as.Date(date))  # convert to Date if not already
+
+
 
 #Note; limit is set to 60 for readability, 2 attractions have higher datapoints
 efteling_dataset %>%
@@ -148,3 +157,5 @@ efteling_dataset %>%
   coord_flip() +
   scale_y_continuous(limits = c(0, 60)) +
   labs(x = "Ride", y = "Average Queue (min)")
+
+
