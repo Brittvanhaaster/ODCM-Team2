@@ -83,8 +83,8 @@ weather <- raw_weather %>%
     temperature_forecast = as.numeric(str_remove(temperature_forecast, "°C")),
     temperature_actual   = as.numeric(str_remove(temperature_actual, "°C")),
     
-    intensity_forecast   = as.numeric(str_remove(intensity_forecast, "mm/h")),
-    intensity_actual     = as.numeric(str_remove(intensity_actual, "mm/h")),
+    rain_forecast   = as.numeric(str_remove(intensity_forecast, "mm/h")),
+    rain_actual     = as.numeric(str_remove(intensity_actual, "mm/h")),
     
     wind_forecast        = as.numeric(str_remove(wind_forecast, "m/s")),
     wind_actual          = as.numeric(str_remove(wind_actual, "m/s"))
@@ -135,3 +135,25 @@ efteling_dataset <- rides %>%
 
 #Check if the dataset has missing values
 colSums(is.na(efteling_dataset))
+
+
+
+library(lubridate)
+
+# Assuming your dataset is called 'weather'
+efteling_dataset <- efteling_dataset %>%
+  mutate(date = as.Date(date))  # convert to Date if not already
+
+
+
+#Note; limit is set to 60 for readability, 2 attractions have higher datapoints
+efteling_dataset %>%
+  filter(!is.na(avg_queue_min)) %>%
+  ggplot(aes(x = fct_reorder(ride, avg_queue_min, .fun = median, .desc = FALSE),
+             y = avg_queue_min)) +
+  geom_boxplot() +
+  coord_flip() +
+  scale_y_continuous(limits = c(0, 60)) +
+  labs(x = "Ride", y = "Average Queue (min)")
+
+
