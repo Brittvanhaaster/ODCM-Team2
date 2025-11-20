@@ -1,0 +1,22 @@
+---
+title: "API_documentation"
+output: pdf_document
+---
+
+Live Theme Park Queue Times
+
+Theme Parks Wiki has been used to collect the live queue data of the Efteling.
+
+The choice was made for this medium since its well-documented.
+
+The general API-explanations can be found at;
+https://themeparks.wiki/api
+
+The interactive documentation of the API can be found at;
+https://api.themeparks.wiki/docs/v1/
+
+Specifications on endpoints and rate limits can be found at;
+https://themeparks.wiki/api/http
+
+Specifications on OpenAPI / Swagger can be found at;
+https://themeparks.wiki/api/openapi
