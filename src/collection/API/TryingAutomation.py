@@ -71,7 +71,7 @@ def collect_efteling_data():
                     })
 
         # Define CSV filename (simple path for GitHub)
-        csv_filename = 'efteling_queue_data.csv'
+        csv_filename = 'data/efteling_queue_data.csv'
 
         # Check if file exists to determine if we need to write headers
         file_exists = os.path.isfile(csv_filename)
