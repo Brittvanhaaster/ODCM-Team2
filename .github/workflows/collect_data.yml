@@ -26,12 +26,12 @@ jobs:
         pip install requests
         
     - name: Run data collection script
-      run: python TryingAutomation.py
+      run: python src/collection/TryingAutomation.py
       
     - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add efteling_queue_data.csv
+        git add data/efteling_queue_data.csv
         git diff --quiet && git diff --staged --quiet || git commit -m "Update queue data $(date)"
         git push
