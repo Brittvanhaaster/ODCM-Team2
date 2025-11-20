@@ -26,7 +26,7 @@ jobs:
         pip install requests
         
     - name: Run data collection script
-      run: python src/collection/TryingAutomation.py
+      run: python src/collection/API/TryingAutomation.py
       
     - name: Commit and push changes
       run: |
