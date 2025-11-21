@@ -1,82 +1,55 @@
-#Load library
+
+################
+#LOAD LIBRARIES#
+################
+
 library(tidyverse)
+library(lubridate)
 
+#####################################
+#PREPROCESSING WEB SCRAPED RIDE DATA#
+#####################################
 
-##################
-#WEBSCRAPING PART#
-##################
+#Read historical queue data
+raw_his_queue <- read_csv("../../data/efteling_rides_all_years.csv")
 
+#First impressions of dataset
+summary(raw_his_queue)
 
-# Combined ride wait-time dataset (uit jouw scraper)
-efteling_rides <- read_csv("efteling_rides_all_years.csv")
+#Inspect on what attractions/facilities data is collected on
+unique(raw_his_queue$ride)
 
-# Combined park info dataset (crowd, weather, events)
-efteling_parkinfo <- read_csv("efteling_parkinfo_all_years.csv")
+#raw_rides already shows the correct variable classification for analyses.
+#However, rides included are also related to playgrounds and other facilities
+#Therefore eliminate the attractions that do NOT have a queue time
+his_queue <- raw_his_queue %>%
+  filter(!ride %in% c(
+    "Anton Pieck Plein",
+    "Archipel",
+    "Badhuys indoor splash pool",
+    "Diorama",
+    "Efteling Museum",
+    "Fairytale Forest",
+    "Kindervreugd",
+    "Kleuterhof",
+    "Nest!",
+    "Volkvanlaaf",
+    "poolenspa"
+  ))
 
-##################
-# BASIC INSPECTION
-##################
+######################################################
+#PREPROCESSING WEB SCRAPED PARK INFO AND WEATHER DATA#
+######################################################
 
-glimpse(efteling_rides)
-glimpse(efteling_parkinfo)
+#Read historical park info and weather data
+raw_his_info_and_weather <- read_csv("../../data/efteling_parkinfo_all_years.csv")
 
-# Example: mean wait time for one ride
-efteling_rides %>% 
-  filter(ride == "Joris en de Draak") %>%
-  summarise(avg_queue = mean(avg_queue_min, na.rm = TRUE))
+#First impressions of dataset
+summary(raw_his_info_and_weather)
 
-# Unique rides
-unique_rides <- unique(efteling_rides$ride)
-length(unique_rides)
-
-#############################
-# IDENTIFY NON-ATTRACTIONS
-#############################
-
-# Parkinfo contains the “true” list of attractions.
-non_attractions <- efteling_rides %>%
-  filter(!ride %in% efteling_parkinfo$ride) %>%
-  distinct(ride)
-
-non_attractions
-
-##########
-#API PART#
-##########
-
-test <- read_csv("efteling_queue_data.csv")
-
-#Convert wait_time to numeric (N/A will automatically become NA)
-test <- test %>%
-  mutate(wait_time = as.numeric(wait_time))
-
-#Now calculate averages
-test %>%
-  group_by(attraction_name, queue_type) %>%
-  summarise(averagequeue = mean(wait_time, na.rm = TRUE)) %>%
-  print(n = 40)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Load raw data 
-raw_weather <- read_csv("Temp/efteling_parkinfo_all_years.csv")
-raw_rides <- read_csv("Temp/efteling_rides_all_years.csv")
-
-
-#Convert the things behind the values so these become numeric
-weather <- raw_weather %>%
+#raw_park_info_and_weather show there are unit of analyses
+#Convert these to normal numeric values
+his_info_and_weather <- raw_his_info_and_weather %>%
   mutate(
     crowd_percent = as.numeric(str_remove(crowd_percent, "%")),
     
@@ -90,64 +63,60 @@ weather <- raw_weather %>%
     wind_actual          = as.numeric(str_remove(wind_actual, "m/s"))
   )
 
-#Select only attractions that HAVE a queue time
-rides <- raw_rides %>%
-  filter(ride %in% c(
-    "Baron 1898",
-    "Baron 1898 Single-rider",
-    "Carnaval Festival",
-    "De Oude Tufferbaan",
-    "De Vliegende Hollander",
-    "De Vliegende Hollander Single-rider",
-    "Droomvlucht",
-    "Droomvlucht VR",
-    "Fabula",
-    "Fata Morgana",
-    "Gondoletta",
-    "Halve Maen",
-    "Joris en de Draak",
-    "Joris en de Draak Single-rider",
-    "Kinderspoor",
-    "Max & Moritz",
-    "Max & Moritz Single-rider",
-    "Monorail",
-    "Pagode",
-    "Piraña",
-    "Python",
-    "Python Single-rider",
-    "Sirocco",
-    "Stoomcarrousel",
-    "Stoomtrein Marerijk",
-    "Stoomtrein Ruigrijk",
-    "Symbolica",
-    "Symbolica Single-rider",
-    "The Six Swans",
-    "Villa Volta",
-    "Vogel Rok",
-    "Droomvlucht Regular Queue",
-    "Danse Macabre",
-    "Danse Macabre Single-rider"
+############################################
+#PREPROCESSING API DATA ON LIVE QUEUE TIMES#
+############################################
+
+#Read live queue times data
+raw_live_queue <- read_csv("../../data/efteling_queue_data.csv")
+
+#First impressions of dataset
+summary(raw_live_queue)
+
+#Inspect on what attractions/facilities data is collected on
+unique(raw_live_queue$attraction_name)
+
+#raw_queue also has data on playgrounds and other facilities
+#Therefore eliminate the attractions that do NOT have a queue time
+raw_live_queue <- raw_live_queue %>%
+  filter(!attraction_name %in% c(
+    "Kleuterhof",
+    "Nest!",
+    "Archipel",
+    "Volk van Laaf",
+    "Fairytale Forest",
+    "Efteling Museum",
+    "Diorama",
+    "Kindervreugd",
+    "Anton Pieckplein"
   ))
 
-#Merge the weather and ride file based on the data
-efteling_dataset <- rides %>%
-  left_join(weather, by = "date")
+#Convert wait_time to numeric (N/A will automatically become NA)
+live_queue <- raw_live_queue %>%
+  mutate(wait_time = as.numeric(wait_time))
 
-#Check if the dataset has missing values
-colSums(is.na(efteling_dataset))
+#######
+#MERGE#
+#######
 
-
-
-library(lubridate)
-
-# Assuming your dataset is called 'weather'
-efteling_dataset <- efteling_dataset %>%
-  mutate(date = as.Date(date))  # convert to Date if not already
+...
+...
 
 
+##################
+#DATA EXPLORATION#
+##################
 
-#Note; limit is set to 60 for readability, 2 attractions have higher datapoints
-efteling_dataset %>%
+#Of live data, calculate averages
+live_queue %>%
+  group_by(attraction_name, queue_type) %>%
+  summarise(averagequeue = mean(wait_time, na.rm = TRUE)) %>%
+  print(n = 40)
+
+
+
+#Note; limit is set to 60 MINUTES for readability, 2 attractions have higher datapoints
+his_queue %>%
   filter(!is.na(avg_queue_min)) %>%
   ggplot(aes(x = fct_reorder(ride, avg_queue_min, .fun = median, .desc = FALSE),
              y = avg_queue_min)) +
@@ -155,5 +124,7 @@ efteling_dataset %>%
   coord_flip() +
   scale_y_continuous(limits = c(0, 60)) +
   labs(x = "Ride", y = "Average Queue (min)")
+
+
 
 
