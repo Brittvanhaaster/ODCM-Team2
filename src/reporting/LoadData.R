@@ -154,5 +154,5 @@ his_queue %>%
              y = avg_queue_min)) +
   geom_boxplot() +
   coord_flip() +
-  scale_y_continuous(limits = c(0, 60)) +
+  scale_y_continuous(limits = c(0, 60), breaks = seq(0, 60, by = 5)) +
   labs(x = "Ride", y = "Average Queue (min)")
