@@ -28,11 +28,13 @@ his_queue <- raw_his_queue %>%
     "Archipel",
     "Badhuys indoor splash pool",
     "Diorama",
+    "Droomvlucht VR",
     "Efteling Museum",
     "Fairytale Forest",
     "Kindervreugd",
     "Kleuterhof",
     "Nest!",
+    "The Six Swans",
     "Volkvanlaaf",
     "poolenspa"
   ))
@@ -95,13 +97,41 @@ raw_live_queue <- raw_live_queue %>%
 live_queue <- raw_live_queue %>%
   mutate(wait_time = as.numeric(wait_time))
 
+##############################
+#REMOVE RAW FILES FOR CLARITY#
+##############################
+
+rm(raw_his_info_and_weather, raw_his_queue, raw_live_queue)
+
 #######
 #MERGE#
 #######
 
-...
-...
+#The live dataset has Single-rider as a seperate column and not added to the attraction name
+#In order to have a composite key for merging, the following code adds this
+live_queue <- live_queue %>%
+  mutate(attraction_name = if_else(queue_type == "SINGLE_RIDER",
+                                   paste(attraction_name, "Single-rider"),
+                                   attraction_name))
 
+#There are inconsistencies in naming the steam train attraction. This is fixed with
+live_queue <- live_queue %>%
+  mutate(attraction_name = case_when(
+    attraction_name == "Stoomtrein - Oost" ~ "Stoomtrein Ruigrijk",
+    attraction_name == "Stoomtrein - Marerijk" ~ "Stoomtrein Marerijk",
+    TRUE ~ attraction_name
+  ))
+
+#In the historical dataset, one ride has a different name, which is modified with this code
+his_queue <- his_queue %>%
+  mutate(ride = case_when(
+    ride == "Droomvlucht Regular Queue" ~ "Droomvlucht",
+    TRUE ~ ride
+  ))
+
+#Checkup: Verify whether the historical and API data have data on the SAME attractions
+unique(live_queue$attraction_name) %>% sort()
+unique(his_queue$ride) %>% sort()
 
 ##################
 #DATA EXPLORATION#
@@ -114,17 +144,15 @@ live_queue %>%
   print(n = 40)
 
 
-
+#Graph for average historical queue time per attraction
+#Note; single-rider queues are not included
 #Note; limit is set to 60 MINUTES for readability, 2 attractions have higher datapoints
 his_queue %>%
   filter(!is.na(avg_queue_min)) %>%
+  filter(!grepl("Single-rider", ride)) %>%
   ggplot(aes(x = fct_reorder(ride, avg_queue_min, .fun = median, .desc = FALSE),
              y = avg_queue_min)) +
   geom_boxplot() +
   coord_flip() +
   scale_y_continuous(limits = c(0, 60)) +
   labs(x = "Ride", y = "Average Queue (min)")
-
-
-
-
