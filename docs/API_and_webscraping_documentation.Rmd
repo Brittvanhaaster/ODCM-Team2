@@ -20,3 +20,13 @@ https://themeparks.wiki/api/http
 
 Specifications on OpenAPI / Swagger can be found at;
 https://themeparks.wiki/api/openapi
+
+
+
+
+
+
+
+Queue-TImes.com is used to gather information on historical queue times, park info and weather conditions.
+
+
