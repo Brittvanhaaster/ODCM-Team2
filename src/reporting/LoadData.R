@@ -103,6 +103,11 @@ live_queue <- raw_live_queue %>%
 
 rm(raw_his_info_and_weather, raw_his_queue, raw_live_queue)
 
+
+
+
+
+
 #######
 #MERGE#
 #######
@@ -132,6 +137,14 @@ his_queue <- his_queue %>%
 #Checkup: Verify whether the historical and API data have data on the SAME attractions
 unique(live_queue$attraction_name) %>% sort()
 unique(his_queue$ride) %>% sort()
+
+
+
+
+
+
+
+
 
 ##################
 #DATA EXPLORATION#
