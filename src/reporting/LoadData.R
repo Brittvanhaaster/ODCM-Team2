@@ -72,14 +72,6 @@ his_info_and_weather <- raw_his_info_and_weather %>%
     rain_actual = intensity_actual
   )
 
-#############################
-#MERGING THE WEBSCRAPED DATA#
-#############################
-
-#Merge the web scraped datasets
-his_complete <- his_queue %>%
-  left_join(his_info_and_weather, by = "date")
-
 ############################################
 #PREPROCESSING API DATA ON LIVE QUEUE TIMES#
 ############################################
@@ -146,6 +138,14 @@ his_queue <- his_queue %>%
 unique(live_queue$attraction_name) %>% sort()
 unique(his_queue$ride) %>% sort()
 
+#############################
+#MERGING THE WEBSCRAPED DATA#
+#############################
+
+#Merge the web scraped datasets
+his_complete <- his_queue %>%
+  left_join(his_info_and_weather, by = "date")
+
 ##################
 #DATA EXPLORATION#
 ##################
@@ -179,3 +179,4 @@ his_complete %>%
   coord_flip() +
   scale_y_continuous(limits = c(0, 60), breaks = seq(0, 60, by = 5)) +
   labs(x = "Ride", y = "Average Queue (min)")
+
