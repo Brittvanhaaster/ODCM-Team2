@@ -97,20 +97,9 @@ raw_live_queue <- raw_live_queue %>%
 live_queue <- raw_live_queue %>%
   mutate(wait_time = as.numeric(wait_time))
 
-##############################
-#REMOVE RAW FILES FOR CLARITY#
-##############################
-
-rm(raw_his_info_and_weather, raw_his_queue, raw_live_queue)
-
-
-
-
-
-
-#######
-#MERGE#
-#######
+####################################################
+#PREPROCESSING DATA FROM THE PERSPECTIVE OF MERGING#
+####################################################
 
 #The live dataset has Single-rider as a seperate column and not added to the attraction name
 #In order to have a composite key for merging, the following code adds this
@@ -138,17 +127,12 @@ his_queue <- his_queue %>%
 unique(live_queue$attraction_name) %>% sort()
 unique(his_queue$ride) %>% sort()
 
-
-
-
-
-
-
-
-
 ##################
 #DATA EXPLORATION#
 ##################
+
+#Remoe raw files for clarity while data exploring
+rm(raw_his_info_and_weather, raw_his_queue, raw_live_queue)
 
 #Of live data, calculate averages
 live_queue %>%
