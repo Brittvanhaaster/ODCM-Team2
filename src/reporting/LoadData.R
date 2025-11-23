@@ -94,8 +94,12 @@ raw_live_queue <- raw_live_queue %>%
   ))
 
 #Convert wait_time to numeric (N/A will automatically become NA)
-live_queue <- raw_live_queue %>%
+raw_live_queue <- raw_live_queue %>%
   mutate(wait_time = as.numeric(wait_time))
+
+#The timestamp is accidentally at UTC timezone, while it should be UTC+1. Adjust this with;
+live_queue <- raw_live_queue %>%
+  mutate(timestamp = timestamp + hours(1))
 
 ####################################################
 #PREPROCESSING DATA FROM THE PERSPECTIVE OF MERGING#
@@ -131,7 +135,12 @@ unique(his_queue$ride) %>% sort()
 #DATA EXPLORATION#
 ##################
 
-#Remoe raw files for clarity while data exploring
+#Summarise definitive datasets
+summary(his_info_and_weather)
+summary(his_queue)
+summary(live_queue)
+
+#Remove raw files for clarity while data exploring
 rm(raw_his_info_and_weather, raw_his_queue, raw_live_queue)
 
 #Of live data, calculate averages
@@ -140,16 +149,9 @@ live_queue %>%
   summarise(averagequeue = mean(wait_time, na.rm = TRUE)) %>%
   print(n = 40)
 
-
 #Graph for average historical queue time per attraction
 #Note; single-rider queues are not included
 #Note; limit is set to 60 MINUTES for readability, 2 attractions have higher datapoints
 his_queue %>%
   filter(!is.na(avg_queue_min)) %>%
-  filter(!grepl("Single-rider", ride)) %>%
-  ggplot(aes(x = fct_reorder(ride, avg_queue_min, .fun = median, .desc = FALSE),
-             y = avg_queue_min)) +
-  geom_boxplot() +
-  coord_flip() +
-  scale_y_continuous(limits = c(0, 60), breaks = seq(0, 60, by = 5)) +
-  labs(x = "Ride", y = "Average Queue (min)")
+  
