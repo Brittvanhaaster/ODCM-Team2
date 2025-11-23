@@ -51,19 +51,34 @@ summary(raw_his_info_and_weather)
 
 #raw_park_info_and_weather show there are unit of analyses
 #Convert these to normal numeric values
-his_info_and_weather <- raw_his_info_and_weather %>%
+raw_his_info_and_weather <- raw_his_info_and_weather %>%
   mutate(
     crowd_percent = as.numeric(str_remove(crowd_percent, "%")),
     
     temperature_forecast = as.numeric(str_remove(temperature_forecast, "°C")),
     temperature_actual   = as.numeric(str_remove(temperature_actual, "°C")),
     
-    rain_forecast   = as.numeric(str_remove(intensity_forecast, "mm/h")),
-    rain_actual     = as.numeric(str_remove(intensity_actual, "mm/h")),
+    intensity_forecast   = as.numeric(str_remove(intensity_forecast, "mm/h")),
+    intensity_actual     = as.numeric(str_remove(intensity_actual, "mm/h")),
     
-    wind_forecast        = as.numeric(str_remove(wind_forecast, "m/s")),
-    wind_actual          = as.numeric(str_remove(wind_actual, "m/s"))
+    wind_forecast   = as.numeric(str_remove(wind_forecast, "m/s")),
+    wind_actual     = as.numeric(str_remove(wind_actual, "m/s"))
   )
+
+#'Intensity' refers to rain but might be confusing, therefore rename this
+his_info_and_weather <- raw_his_info_and_weather %>%
+  rename(
+    rain_forecast = intensity_forecast,
+    rain_actual = intensity_actual
+  )
+
+#############################
+#MERGING THE WEBSCRAPED DATA#
+#############################
+
+#Merge the web scraped datasets
+his_complete <- his_queue %>%
+  left_join(his_info_and_weather, by = "date")
 
 ############################################
 #PREPROCESSING API DATA ON LIVE QUEUE TIMES#
@@ -135,13 +150,12 @@ unique(his_queue$ride) %>% sort()
 #DATA EXPLORATION#
 ##################
 
-#Summarise definitive datasets
-summary(his_info_and_weather)
-summary(his_queue)
-summary(live_queue)
-
 #Remove raw files for clarity while data exploring
 rm(raw_his_info_and_weather, raw_his_queue, raw_live_queue)
+
+#Summarise definitive datasets
+summary(his_complete)
+summary(live_queue)
 
 #Of live data, calculate averages
 live_queue %>%
@@ -152,6 +166,12 @@ live_queue %>%
 #Graph for average historical queue time per attraction
 #Note; single-rider queues are not included
 #Note; limit is set to 60 MINUTES for readability, 2 attractions have higher datapoints
-his_queue %>%
+his_complete %>%
   filter(!is.na(avg_queue_min)) %>%
-  
+  filter(!grepl("Single-rider", ride)) %>%
+  ggplot(aes(x = fct_reorder(ride, avg_queue_min, .fun = median, .desc = FALSE),
+             y = avg_queue_min)) +
+  geom_boxplot() +
+  coord_flip() +
+  scale_y_continuous(limits = c(0, 60), breaks = seq(0, 60, by = 5)) +
+  labs(x = "Ride", y = "Average Queue (min)")
