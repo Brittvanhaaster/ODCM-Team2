@@ -153,15 +153,19 @@ unique(his_queue$ride) %>% sort()
 #Remove raw files for clarity while data exploring
 rm(raw_his_info_and_weather, raw_his_queue, raw_live_queue)
 
+#Potentially remove the seperate web scraped files
+rm(his_info_and_weather, his_queue)
+
 #Summarise definitive datasets
 summary(his_complete)
 summary(live_queue)
 
-#Of live data, calculate averages
+#Of live data, calculate average queue time
 live_queue %>%
   group_by(attraction_name, queue_type) %>%
   summarise(averagequeue = mean(wait_time, na.rm = TRUE)) %>%
-  print(n = 40)
+  arrange(desc(averagequeue)) %>%
+  print(n = 31)
 
 #Graph for average historical queue time per attraction
 #Note; single-rider queues are not included
