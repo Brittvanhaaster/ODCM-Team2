@@ -146,15 +146,24 @@ unique(his_queue$ride) %>% sort()
 his_complete <- his_queue %>%
   left_join(his_info_and_weather, by = "date")
 
-##################
-#DATA EXPLORATION#
-##################
+#################
+#FILE MANAGEMENT#
+#################
 
 #Remove raw files for clarity while data exploring
 rm(raw_his_info_and_weather, raw_his_queue, raw_live_queue)
 
 #Potentially remove the seperate web scraped files
 rm(his_info_and_weather, his_queue)
+
+#Save the definitive datafiles locally
+write_csv(his_complete, "../../data/efteling_his_complete.csv")
+write_csv(live_queue, "../../data/efteling_live_queue.csv")
+
+##################
+#DATA EXPLORATION#
+##################
+
 
 #Summarise definitive datasets
 summary(his_complete)
