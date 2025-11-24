@@ -225,3 +225,28 @@ print(p_queue_vs_crowd)
 ggsave("figures/fig_04_queue_vs_crowd.png",
        p_queue_vs_crowd, width = 7, height = 5, dpi = 300)
 
+# 6. Average queue time per ride ---------------------------
+
+p_rides <- rides %>%
+  group_by(ride) %>%
+  summarise(
+    mean_wait = mean(avg_queue_min, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  ggplot(aes(x = reorder(ride, mean_wait), y = mean_wait)) +
+  geom_col() +
+  coord_flip() +
+  labs(
+    title = "Average Queue Time by Ride",
+    x = "Ride",
+    y = "Average wait (minutes)"
+  ) +
+  theme_minimal()
+
+print(p_rides)
+
+ggsave("figures/fig_05_average_queue_by_ride.png",
+       p_rides,
+       width = 9,
+       height = 6,
+       dpi = 300)
