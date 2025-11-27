@@ -37,4 +37,4 @@ his_queue <- raw_his_queue %>%
   ))
 
 #Save files
-write_csv(his_queue, "../../data/his_queue.csv")
+write_csv(his_queue, "../../data/temp/his_queue.csv")

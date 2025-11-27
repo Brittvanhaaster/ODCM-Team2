@@ -40,4 +40,4 @@ live_queue <- raw_live_queue %>%
   mutate(timestamp = timestamp + hours(1))
 
 #Save file
-write_csv(live_queue, "../../data/live_queue.csv")
+write_csv(live_queue, "../../data/temp/live_queue.csv")

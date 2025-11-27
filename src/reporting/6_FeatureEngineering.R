@@ -19,7 +19,7 @@ efteling_his_merged <- read_csv("../../data/efteling_his_merged.csv")
 
 #1
 #Weekend variable
-efteling_his_complete <- efteling_his_complete %>% mutate(
+efteling_his_merged <- efteling_his_merged %>% mutate(
   
   #Ensure date is recognised as a date
   date = ymd(date),
@@ -32,7 +32,7 @@ efteling_his_complete <- efteling_his_complete %>% mutate(
 
 #2
 #Single rider simplification
-efteling_his_complete <- efteling_his_complete %>% mutate(
+efteling_his_merged <- efteling_his_merged %>% mutate(
   
   # Single rider indicator
   has_single_rider = if_else(str_detect(tolower(ride), "single"), 1, 0)
@@ -42,7 +42,7 @@ efteling_his_complete <- efteling_his_complete %>% mutate(
 
 #3
 # Ride indication
-efteling_his_complete <- efteling_his_complete %>% mutate(
+efteling_his_merged <- efteling_his_merged %>% mutate(
   
     # Indoor / outdoor classification
     indoor_outdoor = case_when(
@@ -66,7 +66,7 @@ efteling_his_complete <- efteling_his_complete %>% mutate(
 
 #4
 # Ride capacity
-efteling_his_complete <- efteling_his_complete %>% mutate(
+efteling_his_merged <- efteling_his_merged %>% mutate(
     capacity_theoretical = case_when(
       ride == "Baron 1898" ~ 1000,
       ride == "Baron 1898 Single-rider" ~ 1000,
@@ -107,7 +107,7 @@ efteling_his_complete <- efteling_his_complete %>% mutate(
 
 #5
 #Opening year
-efteling_his_complete <- efteling_his_complete %>% 
+efteling_his_merged <- efteling_his_merged %>% 
   mutate(
     opening_year = case_when(
       ride == "Baron 1898" ~ 2015,
@@ -213,7 +213,7 @@ school_holidays <- tribble(
   mutate(is_school_holiday_any = TRUE)  # This line creates the column
 
 # Holiday feature engineering
-efteling_his_complete <- efteling_his_complete %>%
+efteling_his_merged <- efteling_his_merged %>%
   
   # Join school holidays
   left_join(school_holidays, by = "date") %>%
@@ -230,7 +230,7 @@ efteling_his_complete <- efteling_his_complete %>%
 ###########################################
 
 #Sanity check to see if there are missing values on newly created dataset
-colSums(is.na(efteling_his_complete))
+colSums(is.na(efteling_his_merged))
 
 #Save file
-write_csv(efteling_his_complete, "../../data/efteling_his_complete.csv")
+write_csv(efteling_his_merged, "../../data/efteling_his_complete.csv")
