@@ -37,4 +37,4 @@ his_info_and_weather <- raw_his_info_and_weather %>%
   )
 
 #Save files
-write_csv(his_info_and_weather, "../../data/his_info_and_weather.csv")
+write_csv(his_info_and_weather, "../../data/temp/his_info_and_weather.csv")

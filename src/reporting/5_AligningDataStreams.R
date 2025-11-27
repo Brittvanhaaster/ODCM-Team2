@@ -8,8 +8,8 @@ library(tidyverse)
 library(lubridate)
 
 #Read in data
-his_merged <- read_csv("../../data/his_merged.csv")
-live_queue <- read_csv("../../data/live_queue.csv")
+his_merged <- read_csv("../../data/temp/his_merged.csv")
+live_queue <- read_csv("../../data/temp/live_queue.csv")
 
 #The live dataset has Single-rider as a seperate column and not added to the attraction name
 #In order to have a composite key for merging, the following code adds this
