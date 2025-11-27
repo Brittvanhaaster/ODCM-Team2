@@ -1,0 +1,40 @@
+#PLEASE SEE THE GITHUB ENVIRONMENT.
+#USING GITHUB ACTIONS, THE FOLLOWING CODE WAS USED FOR AUTOMATING THE DATA COLLECTION OF LIVE DATA
+
+name: Collect Efteling Data
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # Runs every 15 minutes
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  collect-data:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        
+    - name: Install dependencies
+      run: |
+        pip install requests
+        
+    - name: Run data collection script
+      run: python src/collection/API/TryingAutomation.py
+      
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data/efteling_queue_data.csv
+        git diff --quiet && git diff --staged --quiet || git commit -m "Update queue data $(date)"
+        git push
