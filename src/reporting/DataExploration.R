@@ -3,18 +3,18 @@
 ##################
 
 #Summarise definitive datasets
-summary(his_complete)
-summary(live_queue)
+summary(efteling_his_complete)
+summary(efteling_live_queue)
 
 #Of live data, calculate average queue time
-live_queue %>%
+efteling_live_queue %>%
   group_by(attraction_name, queue_type) %>%
   summarise(averagequeue = mean(wait_time, na.rm = TRUE)) %>%
   arrange(desc(averagequeue)) %>%
   print(n = 31)
 
 #Graph for average historical queue time per attraction
-his_complete %>%
+efteling_his_complete %>%
   filter(!is.na(avg_queue_min)) %>%
   #Note; single-rider queues are not included
   filter(!grepl("Single-rider", ride)) %>%
@@ -27,7 +27,7 @@ his_complete %>%
   labs(x = "Ride", y = "Average Queue (min)")
 
 #Queue pattern identification for one particular ride
-live_queue %>%
+efteling_live_queue %>%
   filter(attraction_name == "Danse Macabre") %>%
   filter(queue_type == "STANDBY") %>%
   mutate(hour = hour(timestamp) + minute(timestamp)/60) %>%
@@ -42,7 +42,7 @@ live_queue %>%
   theme_minimal()
 
 #Overview of weather conditions and crowd percentage aggregated to month level
-his_complete %>%
+efteling_his_complete %>%
   distinct(date, .keep_all = TRUE) %>%
   mutate(month = month(date, label = TRUE, abbr = FALSE)) %>%
   group_by(month) %>%
@@ -55,7 +55,7 @@ his_complete %>%
   arrange(month)
 
 #Exploration of average queue time and crowd on a month level
-his_complete %>%
+efteling_his_complete %>%
   filter(!is.na(avg_queue_min)) %>%
   mutate(month = month(date, label = TRUE, abbr = FALSE)) %>%
   group_by(month) %>%
