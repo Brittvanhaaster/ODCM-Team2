@@ -21,3 +21,8 @@ $(FINAL)/efteling_live_queue.csv $(FINAL)/efteling_his_merged.csv: 5_AligningDat
 
 $(FINAL)/efteling_his_complete.csv: 6_FeatureEngineering.R $(FINAL)/efteling_his_merged.csv
 	Rscript --vanilla $<
+
+clean:
+	Rscript -e "unlink('../../data/temp', recursive = TRUE)"
+
+.PHONY: all clean
