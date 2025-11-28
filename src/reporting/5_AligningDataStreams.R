@@ -37,6 +37,9 @@ his_merged <- his_merged %>%
 unique(live_queue$attraction_name) %>% sort()
 unique(his_merged$ride) %>% sort()
 
+#Create a final data folder
+dir.create("../../data/final", recursive = TRUE)
+
 #Save files
 write_csv(live_queue, "../../data/final/efteling_live_queue.csv")
 write_csv(his_merged, "../../data/final/efteling_his_merged.csv")

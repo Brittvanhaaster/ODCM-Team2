@@ -36,5 +36,8 @@ his_queue <- raw_his_queue %>%
     "poolenspa"
   ))
 
+#Create a temporary data folder
+dir.create("../../data/temp", recursive = TRUE)
+
 #Save files
 write_csv(his_queue, "../../data/temp/his_queue.csv")

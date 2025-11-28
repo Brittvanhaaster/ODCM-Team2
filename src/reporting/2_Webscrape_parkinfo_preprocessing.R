@@ -36,5 +36,8 @@ his_info_and_weather <- raw_his_info_and_weather %>%
     rain_actual = intensity_actual
   )
 
+#Create a temporary data folder
+dir.create("../../data/temp", recursive = TRUE)
+
 #Save files
 write_csv(his_info_and_weather, "../../data/temp/his_info_and_weather.csv")
