@@ -1,10 +1,11 @@
-#Load libraries
-library(tidyverse)
-library(lubridate)
 
 #################
 #FILE MANAGEMENT#
 #################
+
+#Load libraries
+library(tidyverse)
+library(lubridate)
 
 #After running the previous 5 steps, there is a lot of data.
 #This script removes the unnecessary files
