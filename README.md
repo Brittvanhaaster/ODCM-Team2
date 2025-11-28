@@ -1,7 +1,6 @@
-# Theme Park Queues and Weather  
+# The Wait is Over: A Dual-Method Data Collection on Theme Park Queues 
 
-For now we work in word and this will be updated in the final stage
- 
+This GitHub environment is supporting the data documentation file.
 
  
 
