@@ -10,6 +10,9 @@ library(lubridate)
 #This script removes the unnecessary files
 rm(list = ls())
 
+#The temporary data folder can also be removed
+unlink("../../data/temp", recursive = TRUE)
+
 #This is the definitive data
 efteling_live_queue <- read_csv("../../data/final/efteling_live_queue.csv")
 efteling_his_complete <- read_csv("../../data/final/efteling_his_complete.csv") #Includes feature engineering
