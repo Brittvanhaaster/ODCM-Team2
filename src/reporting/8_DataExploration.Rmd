@@ -16,9 +16,9 @@ efteling_his_complete <- read_csv("data/final/efteling_his_complete.csv")
 ```
 
 
-# Descriptive statistics
+# *Descriptive statistics*
 
-## Historical data
+## *Historical data*
 
 ```{r}
 #Summarise definitive datasets
@@ -59,7 +59,7 @@ efteling_his_complete %>%
 
 
   
-## Live data
+## *Live data*
 
 
 ```{r}
@@ -77,9 +77,9 @@ efteling_live_queue %>%
   print(n = 31)
 ```
 
-# Data Visualisations
+# *Data Visualisations*
 
-## Historical data
+## *Historical data*
 
 ```{r, echo = FALSE}
 #Graph for average historical queue time per attraction
@@ -97,7 +97,7 @@ efteling_his_complete %>%
 ```
 
 
-## Live data
+## *Live data*
 
 
 ```{r}
