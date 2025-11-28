@@ -19,5 +19,5 @@ $(TEMP)/live_queue.csv: 4_API_preprocessing.R $(DATA)/efteling_queue_data.csv
 $(FINAL)/efteling_live_queue.csv $(FINAL)/efteling_his_merged.csv: 5_AligningDataStreams.R $(TEMP)/his_merged.csv $(TEMP)/live_queue.csv
 	Rscript --vanilla $<
 
-$(TEMP)/movies_prepped.csv: 6_FeatureEngineering.R $(TEMP)/movies_filtered.csv
+$(FINAL)/efteling_his_complete.csv: 6_FeatureEngineering.R $(FINAL)/efteling_his_merged.csv
 	Rscript --vanilla $<
