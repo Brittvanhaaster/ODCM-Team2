@@ -38,5 +38,5 @@ unique(live_queue$attraction_name) %>% sort()
 unique(his_merged$ride) %>% sort()
 
 #Save files
-write_csv(live_queue, "../../data/efteling_live_queue.csv")
-write_csv(his_merged, "../../data/efteling_his_merged.csv")
+write_csv(live_queue, "../../data/final/efteling_live_queue.csv")
+write_csv(his_merged, "../../data/final/efteling_his_merged.csv")
