@@ -11,5 +11,6 @@ library(lubridate)
 rm(list = ls())
 
 #This is the definitive data
-efteling_his_complete <- read_csv("../../data/efteling_his_complete.csv")
-efteling_live_queue <- read_csv("../../data/efteling_live_queue.csv")
+efteling_live_queue <- read_csv("../../data/final/efteling_live_queue.csv")
+efteling_his_merged <- read_csv("../../data/final/efteling_his_merged.csv")
+efteling_his_complete <- read_csv("../../data/final/efteling_his_complete.csv") #Includes feature engineering

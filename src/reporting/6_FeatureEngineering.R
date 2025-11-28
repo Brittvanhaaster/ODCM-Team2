@@ -8,7 +8,7 @@ library(tidyverse)
 library(lubridate)
 
 #Read in dataset
-efteling_his_merged <- read_csv("../../data/efteling_his_merged.csv")
+efteling_his_merged <- read_csv("../../data/final/efteling_his_merged.csv")
 
 #As an additional bonus to the cleaned and aligned datasets from step 5, this scripts provides feature 
 #engineering variables that could be of potential interest when analysing the datasets. Although the
@@ -233,4 +233,4 @@ efteling_his_merged <- efteling_his_merged %>%
 colSums(is.na(efteling_his_merged))
 
 #Save file
-write_csv(efteling_his_merged, "../../data/efteling_his_complete.csv")
+write_csv(efteling_his_merged, "../../data/final/efteling_his_complete.csv")
