@@ -21,7 +21,6 @@ efteling_his_complete <- read_csv("../../data/final/efteling_his_complete.csv") 
 efteling_his_merged <- read_csv("../../data/final/efteling_his_merged.csv")
 ```
 
-
 # *Descriptive statistics*
 
 ## *Historical data*
@@ -31,7 +30,7 @@ efteling_his_merged <- read_csv("../../data/final/efteling_his_merged.csv")
 summary(efteling_live_queue)
 ```
 
-
+The summary of the efteling_live_queue dataset shows that it contains 8,215 observations, with waiting times ranging from 0 (min. wait_time) to 65 minutes (max. wait_time). The median waiting time is 5 minutes, which indicates that at least half of the reported queues were very short. The mean is 9.251, which is slightly higher, because of some outliers of longer waiting time. The dataset includes 1,319 missing values within the wait_time variable. This means careful treatment of missing data in subsequent analysis is important.
 
 ```{r, echo = FALSE}
 #Overview of weather conditions and crowd percentage aggregated to month level
@@ -48,6 +47,7 @@ efteling_his_complete %>%
   arrange(month)
 ```
 
+The monthly aggregate of the historical dataset indicates a seasonal pattern in both the crowd levels and the weather conditions. The data shows that average crowd percentages are lowest during winter months, such as January and February, and this percentage steadily increases towards the summer, with peaks in June and August. These peaks in crowd percentages coincide with higher average temperatures (avg_temp_actual), which indicates that warmer weather is associated with a higher number of park visitors. Rainfall levels (avg_rain_actual) does not show a strong seasonal pattern, although somewhat greater values are observed in the spring and fall. Wind conditions (avg_wind_actual) remain relatively stable during the year. Overall, these results indicate that seasonal weather conditions are correlated with fluctuations in park crowding.
 
 ```{r, echo = FALSE}
 #Exploration of average queue time and crowd on a month level
@@ -61,18 +61,17 @@ efteling_his_complete %>%
   ) %>%
   arrange(month)
 ```
+Where in the previous table the focus was laid upon the monthly crowd levels in relation to weather conditions, this summary examines the relation between crowd levels and queue times.
 
+The monthly averages reveal a seasonal pattern in crowd levels and queue times. Avg_crowd_percentages rise during the spring and summer months, with peaks in June and August. The increase in park attendance coincide with longer avg_queue_times. In contrast, lower crowd levels are noticeable in winter months, such as January and February, which correspond with shorter waiting times. Overall, these results indicate a strong positive correlation between the monthly crowd percentages and avg_queue_times, which indicates that periods that are busier consistently  lead to longer queues in the park. 
 
-
-  
 ## *Live data*
-
 
 ```{r}
 #Summarise definitive datasets
 summary(efteling_his_complete)
 ```
-
+This definitive data set of the historical data contains 31,342 observations covering the period from January 2023 to November 2025. Average queue times range from 5 (min) to 141 (max) minutes, with 5,290 missing values. Crowd levels vary between the 0 and the 100%, which shows variability throughout the data. Weather variables, like temperature, rainfall, and wind speed vary widely across the data set. Additional contextual information relevant for modelling queue dynamics, such as ride type, or  indoor vs. outdoor, are also incorporate in this data set. 
 
 ```{r}
 #Of live data, calculate average queue time
@@ -82,6 +81,7 @@ efteling_live_queue %>%
   arrange(desc(averagequeue)) %>%
   print(n = 31)
 ```
+Utilizing the live queue data set, which contains 8,215 observations, the analysis identified all 31 attractions of which the average waiting time can be calculated. The table shows all the attractions in combination with their corresponding queue type, such as standby or single_rider. This output can be used to compare queue dynamics across rides and queue systems. 
 
 # *Data Visualisations*
 
@@ -101,8 +101,7 @@ efteling_his_complete %>%
   scale_y_continuous(limits = c(0, 60), breaks = seq(0, 60, by = 5)) +
   labs(x = "Ride", y = "Average Queue (min)")
 ```
-
-
+This boxplot shows a summary of the historical queue times for the 31 attractions, with an exclusion on the single-rider lines. A big part of the rides show median waiting times between the 10 and 30 minutes. Several rides, such as Symbolica, Joris en de Draak, and Baron 1898, show variability and occasional peaks above the 40 minutes. The x-axis was limited to 60 minutes for readability, and two rides has a small number of exterme outliers, that ranged above the 60 minutes. Overall, the boxplot shows the differences in queue times across the rides, where extreme rides generally show longer and more fluctuating wait times. 
 ```{r}
 # 1. Prepare data directly from Rmd objects ----------------
 
@@ -127,7 +126,6 @@ park <- efteling_his_complete %>%
     rain_actual_num   = as.numeric(rain_actual)
   )
 ```
-
 
 ```{r}
 # 2. Historic overview of average queue times --------------
@@ -168,7 +166,6 @@ p_daily_queue_smooth <- ggplot(daily_queue_smooth,
   theme_minimal()
 
 ```
-
 
 ```{r}
 
@@ -217,7 +214,6 @@ p_monthly_rain <- ggplot(monthly_park, aes(x = month, y = rain)) +
 
 ```
 
-
 ```{r}
 # 5. Monthly queue time vs crowd relationship --------------
 
@@ -245,7 +241,6 @@ p_queue_vs_crowd <- ggplot(monthly_joined,
 
 ```
 
-
 ```{r}
 # 6. Average queue time per ride ---------------------------
 
@@ -267,9 +262,7 @@ p_rides <- rides %>%
 
 ```
 
-
 ## *Live data*
-
 
 ```{r}
 #Queue pattern identification for one particular ride
@@ -287,7 +280,7 @@ efteling_live_queue %>%
   ) +
   theme_minimal()
 ```
-
+The Queue pattern for Danse Macabre shows a clear decline in waiting times over the day. The queue begins at its highest point around 10 am, where it is approximately 50 - 55 minuters. After this it drops towards the early afternoon. Between 1 pm and 7 pm, the wait time stabilizes at a lower level of 18 - 25 minutes. This daily pattern indicates that the morning period consistently experiences the highest crowd pressure for this attraction.   
 
 ```{r}
 # 1.2 Live API data (15-min queues)
@@ -298,7 +291,6 @@ live_prepped <- efteling_live_queue %>%
   ) %>%
   rename(ride = attraction_name)
 ```
-
 
 ```{r}
 # 3. Queue pattern during the day (live data) --------------
@@ -322,4 +314,3 @@ p_hourly_queue <- ggplot(hourly_queue, aes(x = hour, y = mean_queue)) +
   theme_minimal()
 
 ```
-
