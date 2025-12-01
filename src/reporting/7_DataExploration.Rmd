@@ -321,3 +321,4 @@ p_hourly_queue <- ggplot(hourly_queue, aes(x = hour, y = mean_queue)) +
   theme_minimal()
 
 ```
+
