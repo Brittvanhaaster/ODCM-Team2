@@ -3,7 +3,9 @@ title: "5   Data Exploration"
 output: pdf_document
 ---
 
-```{r, echo = FALSE}
+# *Descriptive statistics*
+
+```{r message = FALSE, echo = FALSE}
 #Load libraries
 library(tidyverse)
 library(rmarkdown)
@@ -12,13 +14,13 @@ library(readr)
 library(zoo)
 ```
 
-```{r}
-#This is the definitive data
+```{r message = FALSE}
+#This is the definitive API dataset 
 efteling_live_queue <- read_csv("../../data/final/efteling_live_queue.csv")
-efteling_his_complete <- read_csv("../../data/final/efteling_his_complete.csv") #Includes feature engineering
-```
 
-# *Descriptive statistics*
+#This is the definitive web scraped dataset with feature engineering
+efteling_his_complete <- read_csv("../../data/final/efteling_his_complete.csv")
+```
 
 ## *Historical data*
 
@@ -58,9 +60,12 @@ efteling_his_complete %>%
   ) %>%
   arrange(month)
 ```
+
 Where in the previous table the focus was laid upon the monthly crowd levels in relation to weather conditions, this summary examines the relation between crowd levels and queue times.
 
 The monthly averages reveal a seasonal pattern in crowd levels and queue times. Avg_crowd_percentages rise during the spring and summer months, with peaks in June and August. The increase in park attendance coincide with longer avg_queue_times. In contrast, lower crowd levels are noticeable in winter months, such as January and February, which correspond with shorter waiting times. Overall, these results indicate a strong positive correlation between the monthly crowd percentages and avg_queue_times, which indicates that periods that are busier consistently  lead to longer queues in the park. 
+
+\newpage
 
 ## *Live data*
 
@@ -68,6 +73,7 @@ The monthly averages reveal a seasonal pattern in crowd levels and queue times. 
 #Summarise definitive datasets
 summary(efteling_his_complete)
 ```
+
 This definitive data set of the historical data contains 31,342 observations covering the period from January 2023 to November 2025. Average queue times range from 5 (min) to 141 (max) minutes, with 5,290 missing values. Crowd levels vary between the 0 and the 100%, which shows variability throughout the data. Weather variables, like temperature, rainfall, and wind speed vary widely across the data set. Additional contextual information relevant for modelling queue dynamics, such as ride type, or  indoor vs. outdoor, are also incorporate in this data set. 
 
 ```{r}
@@ -78,6 +84,7 @@ efteling_live_queue %>%
   arrange(desc(averagequeue)) %>%
   print(n = 31)
 ```
+
 Utilizing the live queue data set, which contains 8,215 observations, the analysis identified all 31 attractions of which the average waiting time can be calculated. The table shows all the attractions in combination with their corresponding queue type, such as standby or single_rider. This output can be used to compare queue dynamics across rides and queue systems. 
 
 # *Data Visualisations*
@@ -98,7 +105,9 @@ efteling_his_complete %>%
   scale_y_continuous(limits = c(0, 60), breaks = seq(0, 60, by = 5)) +
   labs(x = "Ride", y = "Average Queue (min)")
 ```
+
 This boxplot shows a summary of the historical queue times for the 31 attractions, with an exclusion on the single-rider lines. A big part of the rides show median waiting times between the 10 and 30 minutes. Several rides, such as Symbolica, Joris en de Draak, and Baron 1898, show variability and occasional peaks above the 40 minutes. The x-axis was limited to 60 minutes for readability, and two rides has a small number of exterme outliers, that ranged above the 60 minutes. Overall, the boxplot shows the differences in queue times across the rides, where extreme rides generally show longer and more fluctuating wait times. 
+
 ```{r}
 # 1. Prepare data directly from Rmd objects ----------------
 
@@ -124,7 +133,7 @@ park <- efteling_his_complete %>%
   )
 ```
 
-```{r}
+```{r, echo=FALSE, out.width="60%", fig.align="center"}
 # 2. Historic overview of average queue times --------------
 
 daily_queue <- rides %>%
@@ -277,6 +286,7 @@ efteling_live_queue %>%
   ) +
   theme_minimal()
 ```
+
 The Queue pattern for Danse Macabre shows a clear decline in waiting times over the day. The queue begins at its highest point around 10 am, where it is approximately 50 - 55 minuters. After this it drops towards the early afternoon. Between 1 pm and 7 pm, the wait time stabilizes at a lower level of 18 - 25 minutes. This daily pattern indicates that the morning period consistently experiences the highest crowd pressure for this attraction.   
 
 ```{r}
