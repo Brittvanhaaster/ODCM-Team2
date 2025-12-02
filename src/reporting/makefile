@@ -2,7 +2,7 @@ DATA = ../../data
 TEMP = ../../data/temp
 FINAL = ../../data/final
 
-all: $(FINAL)/efteling_live_queue.csv $(FINAL)/efteling_his_complete.csv $(FINAL)/efteling_his_merged.csv
+all: 7_DataExploration.pdf
 
 $(TEMP)/his_queue.csv: 1_Webscrape_queue_preprocessing.R $(DATA)/efteling_rides_all_years.csv
 	Rscript --vanilla $<
@@ -21,6 +21,9 @@ $(FINAL)/efteling_live_queue.csv $(FINAL)/efteling_his_merged.csv: 5_AligningDat
 
 $(FINAL)/efteling_his_complete.csv: 6_FeatureEngineering.R $(FINAL)/efteling_his_merged.csv
 	Rscript --vanilla $<
+
+7_DataExploration.pdf: 7_DataExploration.Rmd $(FINAL)/efteling_live_queue.csv $(FINAL)/efteling_his_complete.csv
+	Rscript -e "rmarkdown::render('7_DataExploration.Rmd')"
 
 clean:
 	Rscript -e "unlink('../../data/temp', recursive = TRUE)"
