@@ -108,8 +108,8 @@ efteling_his_complete %>%
 
 This boxplot shows a summary of the historical queue times for the 31 attractions, with an exclusion on the single-rider lines. A big part of the rides show median waiting times between the 10 and 30 minutes. Several rides, such as Symbolica, Joris en de Draak, and Baron 1898, show variability and occasional peaks above the 40 minutes. The x-axis was limited to 60 minutes for readability, and two rides has a small number of exterme outliers, that ranged above the 60 minutes. Overall, the boxplot shows the differences in queue times across the rides, where extreme rides generally show longer and more fluctuating wait times.
 
-```{r fig-daily-queue-raw, echo=FALSE}
-#Daily average queue time 
+```{r fig-daily-queue-raw, echo=FALSE, warning=FALSE, message=FALSE}
+# Daily average queue time 
 efteling_his_complete %>%
   filter(!is.na(avg_queue_min)) %>%
   mutate(date = as_date(date)) %>%
@@ -118,14 +118,15 @@ efteling_his_complete %>%
     mean_queue = mean(avg_queue_min, na.rm = TRUE),
     .groups = "drop"
   ) %>%
-  ggplot(aes(x = date, y = mean_queue)) +
-  geom_line() +
+ggplot(aes(x = date, y = mean_queue)) +
+  geom_line() +   
   labs(
     title = "Daily Average Queue Time Over Time",
     x = "Date",
     y = "Average wait (minutes)"
   ) +
   theme_minimal()
+
 
 ```
 
@@ -210,7 +211,7 @@ efteling_his_complete %>%
 
 This figure presents the average monthly temperature throughout the year. Temperatures peak during June–August, while the coldest months appear in winter. The seasonal pattern helps contextualise visitor behaviour, as weather conditions can influence both attendance and queue times. Overall, this variable aligns with expected climate trends.
 
-```{r fig-monthly-rain, echo=FALSE}
+```{r fig-monthly-rain, echo=FALSE, warning=FALSE, message=FALSE}
 #Monthly rainfall
 efteling_his_complete %>%
   mutate(
@@ -302,10 +303,92 @@ efteling_his_complete %>%
 
 This bar chart shows the average queue time for each attraction across the historical dataset. Some rides, such as Baron 1898, Symbolica, and Droomvlucht, consistently have higher waiting times, indicating strong popularity combined with limited capacity. Other rides show much shorter averages, reflecting either higher throughput or lower demand. The figure provides a clear comparison of typical waiting times across all attractions.
 
+```{r, echo=FALSE}
+table(efteling_his_complete$indoor_outdoor)
+efteling_his_complete %>%
+distinct(ride, indoor_outdoor) %>%
+ggplot(aes(x = indoor_outdoor)) +
+geom_bar(fill = "steelblue") +
+labs(
+title = "Count of Indoor vs Outdoor Attractions",
+x = "Type",
+y = "Frequency"
+) +
+theme_minimal()
+
+```
+
+The dataset appears to have nearly twice as many outdoor attractions, around the 20, as indoor attractions, around the 11. This reflects the park’s layout, where outdoor rides cover a big part of the overall parkmap. As a consequence, weather conditions are likely to influence the operational performance and waiting times of a big share of the rides.
+
+```{r, echo=FALSE}
+table(efteling_his_complete$crowd_label)
+efteling_his_complete %>%
+distinct(date, crowd_label) %>%
+ggplot(aes(x = crowd_label)) +
+geom_bar(fill = "darkorange") +
+labs(
+title = "Frequency of Crowd Levels",
+x = "Crowd Category",
+y = "Count"
+) +
+theme_minimal()
+
+```
+
+A distribution of the crowd labels show that the “Busy”, “Empty”, and “Quiet” crowd levels occur frequently, with between the 275 and the 320 observations per label. The “packed” conditions occur slightly less frequently. This shows overall, that extreme crowding conditions, such as packed and busy, is relatively less common, than moderate crowding, such as empty and quiet.
+
+```{r, echo=FALSE}
+table(efteling_his_complete$weekday_weekend)
+efteling_his_complete %>%
+  distinct(date, weekday_weekend) %>%
+  ggplot(aes(x = weekday_weekend)) +
+  geom_bar(fill = 'steelblue')+
+  labs(
+    title = "Frequency of Weekday vs Weekend",
+    x = "Type of Day",
+    y = "Count"
+  ) + 
+  theme_minimal()
+```
+
+Most observations come from weekdays. This distribution is quite similar to what is expected with the amount of week- and weekenddays is a week.
+
+```{r, echo=FALSE}
+table(efteling_his_complete$is_school_holiday_any)
+efteling_his_complete %>%
+  distinct(date, is_school_holiday_any) %>%
+  ggplot(aes(x = is_school_holiday_any)) +
+  geom_bar(fill = "blueviolet") +
+  labs(
+    title = "Frequency of School Holidays",
+    x = "School Holiday",
+    y = "Number of Days"
+  ) +
+  theme_minimal()
+  
+```
+
+Most observations come from days where there was no school holiday. School holidays are overrepresented in this dataset, as in reality they do not account for one-third of all days.
+
+```{r, echo=FALSE}
+table(efteling_his_complete$is_holiday)
+efteling_his_complete %>%
+  distinct(date, is_holiday) %>%
+  ggplot(aes(x = is_holiday)) +
+  geom_bar(fill = "darkcyan") +
+  labs(
+    title = "Frequency of Public Holidays",
+    x = "Public Holiday",
+    y = "Number of Days"
+  ) +
+  theme_minimal()
+```
+
+The number of days with a public holiday are only a small part of the total amount of observations. This distribution is similar to real life, since there are only a few public holidays in a year.
 
 ## *Live data*
 
-```{r}
+```{r, echo=FALSE}
 #Queue pattern identification for one particular ride
 efteling_live_queue %>%
   filter(attraction_name == "Danse Macabre") %>%
@@ -322,7 +405,7 @@ efteling_live_queue %>%
   theme_minimal()
 ```
 
-The Queue pattern for Danse Macabre shows a clear decline in waiting times over the day. The queue begins at its highest point around 10 am, where it is approximately 50 - 55 minuters. After this it drops towards the early afternoon. Between 1 pm and 7 pm, the wait time stabilizes at a lower level of 18 - 25 minutes. This daily pattern indicates that the morning period consistently experiences the highest crowd pressure for this attraction.
+The Queue pattern for Danse Macabre shows a clear decline in waiting times over the day. The queue begins at its highest point around 10 am, where it is approximately 50 - 55 minutes. After this it drops towards the early afternoon. Between 1 pm and 7 pm, the wait time stabilizes at a lower level of 18 - 25 minutes. This daily pattern indicates that the morning period consistently experiences the highest crowd pressure for this attraction.
 
 ```{r fig-hourly-queue-all-rides, echo=FALSE}
 #Average queue pattern across opening hours (all rides)
@@ -351,3 +434,30 @@ efteling_live_queue %>%
 ```
 
 This figure shows the average live waiting time per hour across all attractions. Queue lengths increase rapidly, shortly after opening and reach their highest levels around midday and early afternoon. Towards the evening, the average waiting time gradually declines as crowds disperse or leave the park. The plot reflects the typical daily rhythm of visitor behaviour in a theme-park environment.
+
+```{r, echo=FALSE}
+table(efteling_live_queue$queue_type)
+efteling_live_queue %>%
+ggplot(aes(x = queue_type)) +
+geom_bar(fill = "seagreen") +
+labs(
+title = "Frequency of Queue Types in Live Data",
+x = "Queue Type",
+y = "Number of Observations"
+) +
+theme_minimal()
+
+```
+
+Most of the observations within the dataset correspond to the standby queues, with over 6,000 recorded entries. The single-rider queues are less represented with less than 2,000 recorded entries. The live queue data primarily captured the standard queue behavior.
+
+```{r, echo=FALSE}
+efteling_live_queue %>%
+  group_by(attraction_name) %>%
+  summarise(mean_wait = mean(wait_time, na.rm = TRUE)) %>%
+  arrange(desc(mean_wait)) %>%
+  head(10)
+
+```
+
+This overview indicated that Danse Macabre, the steam trains, and Symbolica have the highest average waiting times, where the means all lay above the 23 minutes. Baron 1898, Joris en de Draak, and Python, the classic thrill rides, experience lower mean waiting times, generally between the 12 and 17 minutes. The overall distribution indicates a variation in attraction popularity.
