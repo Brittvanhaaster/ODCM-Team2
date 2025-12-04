@@ -451,6 +451,7 @@ theme_minimal()
 
 Most of the observations within the dataset correspond to the standby queues, with over 6,000 recorded entries. The single-rider queues are less represented with less than 2,000 recorded entries. The live queue data primarily captured the standard queue behavior.
 
+
 ```{r, echo=FALSE}
 efteling_live_queue %>%
   group_by(attraction_name) %>%
