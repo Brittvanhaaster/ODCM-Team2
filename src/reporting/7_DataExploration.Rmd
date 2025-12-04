@@ -91,7 +91,7 @@ Utilizing the live queue data set, which contains 8,215 observations, the analys
 
 ## *Historical data*
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, warning=FALSE, message=FALSE}
 #Graph for average historical queue time per attraction
 efteling_his_complete %>%
   filter(!is.na(avg_queue_min)) %>%
@@ -132,7 +132,7 @@ ggplot(aes(x = date, y = mean_queue)) +
 
 This time-series plot shows the daily average queue time across all attractions. The data fluctuates strongly from day to day, reflecting natural variation due to weather, crowds, holidays, and operational factors. Several clear peaks occur during busy periods, while dips reflect lower-attendance days. Because the raw data is unsmoothed, the figure emphasises how volatile daily queue patterns can be.
 
-```{r fig-daily-queue-7day, echo=FALSE}
+```{r fig-daily-queue-7day, echo=FALSE, warning=FALSE, message=FALSE}
 #Daily average queue time (7-day rolling mean)
 efteling_his_complete %>%
   filter(!is.na(avg_queue_min)) %>%
@@ -238,7 +238,7 @@ efteling_his_complete %>%
 
 This figure shows the average rainfall per month. Rainfall appears to vary substantially across the year, with wetter months typically occurring in autumn and early spring. Higher rainfall months may correspond to lower attendance levels, although the exact effect varies across days and ride types. The plot helps illustrate how weather conditions fluctuate across seasons.
 
-```{r fig-monthly-queue-vs-crowd, echo=FALSE}
+```{r fig-monthly-queue-vs-crowd, echo=FALSE, warning=FALSE, message=FALSE}
 #Monthly relationship between crowd and queue time
 monthly_crowd <- efteling_his_complete %>%
   mutate(
@@ -388,7 +388,7 @@ The number of days with a public holiday are only a small part of the total amou
 
 ## *Live data*
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 #Queue pattern identification for one particular ride
 efteling_live_queue %>%
   filter(attraction_name == "Danse Macabre") %>%
@@ -449,7 +449,6 @@ theme_minimal()
 ```
 
 Most of the observations within the dataset correspond to the standby queues, with over 6,000 recorded entries. The single-rider queues are less represented with less than 2,000 recorded entries. The live queue data primarily captured the standard queue behavior.
-
 
 ```{r, echo=FALSE}
 efteling_live_queue %>%
