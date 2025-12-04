@@ -347,7 +347,6 @@ efteling_live_queue %>%
   ) +
   theme_minimal()
 
-
 ```
 
 This figure shows the average live waiting time per hour across all attractions. Queue lengths increase rapidly, shortly after opening and reach their highest levels around midday and early afternoon. Towards the evening, the average waiting time gradually declines as crowds disperse or leave the park. The plot reflects the typical daily rhythm of visitor behaviour in a theme-park environment.
