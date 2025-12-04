@@ -31,6 +31,8 @@ summary(efteling_live_queue)
 
 The summary of the efteling_live_queue dataset shows that it contains 8,215 observations, with waiting times ranging from 0 (min. wait_time) to 65 minutes (max. wait_time). The median waiting time is 5 minutes, which indicates that at least half of the reported queues were very short. The mean is 9.251, which is slightly higher, because of some outliers of longer waiting time. The dataset includes 1,319 missing values within the wait_time variable. This means careful treatment of missing data in subsequent analysis is important.
 
+\newpage
+
 ```{r, echo = FALSE}
 #Overview of weather conditions and crowd percentage aggregated to month level
 efteling_his_complete %>%
@@ -76,7 +78,7 @@ summary(efteling_his_complete)
 
 This definitive data set of the historical data contains 31,342 observations covering the period from January 2023 to November 2025. Average queue times range from 5 (min) to 141 (max) minutes, with 5,290 missing values. Crowd levels vary between the 0 and the 100%, which shows variability throughout the data. Weather variables, like temperature, rainfall, and wind speed vary widely across the data set. Additional contextual information relevant for modelling queue dynamics, such as ride type, or indoor vs. outdoor, are also incorporate in this data set.
 
-```{r}
+```{r, echo = FALSE}
 #Of live data, calculate average queue time
 efteling_live_queue %>%
   group_by(attraction_name, queue_type) %>%
