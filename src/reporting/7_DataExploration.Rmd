@@ -1,5 +1,5 @@
 ---
-title: "5   Data Exploration"
+title: "**5   Data Exploration**"
 output: pdf_document
 ---
 
